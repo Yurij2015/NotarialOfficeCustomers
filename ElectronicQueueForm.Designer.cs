@@ -38,36 +38,36 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ElectronicQueueForm));
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
-            this.notarialOfficeCustemersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recordingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.recordingTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.recordingTableAdapter();
             this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
             this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
             this.radBindingNavigator1FirstStrip = new Telerik.WinControls.UI.CommandBarStripElement();
+            this.radBindingNavigator1MoveFirstItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1MovePreviousItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.radBindingNavigator1PositionItem = new Telerik.WinControls.UI.CommandBarTextBox();
             this.radBindingNavigator1CountItem = new Telerik.WinControls.UI.CommandBarLabel();
-            this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.commandBarSeparator3 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1MoveNextItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator4 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1MoveLastItem = new Telerik.WinControls.UI.CommandBarButton();
             this.radBindingNavigator1SecondStrip = new Telerik.WinControls.UI.CommandBarStripElement();
+            this.radBindingNavigator1AddNewItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator5 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
-            this.radBindingNavigator1MoveFirstItem = new Telerik.WinControls.UI.CommandBarButton();
-            this.radBindingNavigator1MovePreviousItem = new Telerik.WinControls.UI.CommandBarButton();
-            this.radBindingNavigator1MoveNextItem = new Telerik.WinControls.UI.CommandBarButton();
-            this.radBindingNavigator1MoveLastItem = new Telerik.WinControls.UI.CommandBarButton();
-            this.radBindingNavigator1AddNewItem = new Telerik.WinControls.UI.CommandBarButton();
-            this.radBindingNavigator1DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -139,20 +139,20 @@
             this.radGridView1.TabIndex = 0;
             this.radGridView1.Click += new System.EventHandler(this.radGridView1_Click);
             // 
-            // notarialOfficeCustemersDataSet
+            // recordingBindingSource
             // 
-            this.notarialOfficeCustemersDataSet.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.recordingBindingSource.DataMember = "recording";
+            this.recordingBindingSource.DataSource = this.notarialOfficeCustemersDataSetBindingSource;
             // 
             // notarialOfficeCustemersDataSetBindingSource
             // 
             this.notarialOfficeCustemersDataSetBindingSource.DataSource = this.notarialOfficeCustemersDataSet;
             this.notarialOfficeCustemersDataSetBindingSource.Position = 0;
             // 
-            // recordingBindingSource
+            // notarialOfficeCustemersDataSet
             // 
-            this.recordingBindingSource.DataMember = "recording";
-            this.recordingBindingSource.DataSource = this.notarialOfficeCustemersDataSetBindingSource;
+            this.notarialOfficeCustemersDataSet.DataSetName = "NotarialOfficeCustemersDataSet";
+            this.notarialOfficeCustemersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // recordingTableAdapter
             // 
@@ -184,7 +184,6 @@
             // 
             // radBindingNavigator1FirstStrip
             // 
-            this.radBindingNavigator1FirstStrip.DesiredLocation = ((System.Drawing.PointF)(resources.GetObject("radBindingNavigator1FirstStrip.DesiredLocation")));
             this.radBindingNavigator1FirstStrip.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radBindingNavigator1FirstStrip.DisplayName = "radBindingNavigator1FirstStrip";
             this.radBindingNavigator1FirstStrip.EnableDragging = false;
@@ -213,6 +212,29 @@
             ((Telerik.WinControls.UI.RadCommandBarGrip)(this.radBindingNavigator1FirstStrip.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.radBindingNavigator1FirstStrip.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
+            // radBindingNavigator1MoveFirstItem
+            // 
+            this.radBindingNavigator1MoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveFirstItem.Image")));
+            this.radBindingNavigator1MoveFirstItem.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.radBindingNavigator1MoveFirstItem.Name = "radBindingNavigator1MoveFirstItem";
+            this.radBindingNavigator1MoveFirstItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveFirstItem.SvgImageXml");
+            // 
+            // commandBarSeparator1
+            // 
+            this.commandBarSeparator1.Name = "commandBarSeparator1";
+            this.commandBarSeparator1.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1MovePreviousItem
+            // 
+            this.radBindingNavigator1MovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MovePreviousItem.Image")));
+            this.radBindingNavigator1MovePreviousItem.Name = "radBindingNavigator1MovePreviousItem";
+            this.radBindingNavigator1MovePreviousItem.SvgImageXml = resources.GetString("radBindingNavigator1MovePreviousItem.SvgImageXml");
+            // 
+            // commandBarSeparator2
+            // 
+            this.commandBarSeparator2.Name = "commandBarSeparator2";
+            this.commandBarSeparator2.VisibleInOverflowMenu = false;
+            // 
             // radBindingNavigator1PositionItem
             // 
             this.radBindingNavigator1PositionItem.Name = "radBindingNavigator1PositionItem";
@@ -223,29 +245,30 @@
             this.radBindingNavigator1CountItem.Name = "radBindingNavigator1CountItem";
             this.radBindingNavigator1CountItem.Text = "of 0";
             // 
-            // commandBarSeparator1
-            // 
-            this.commandBarSeparator1.Name = "commandBarSeparator1";
-            this.commandBarSeparator1.VisibleInOverflowMenu = false;
-            // 
-            // commandBarSeparator2
-            // 
-            this.commandBarSeparator2.Name = "commandBarSeparator2";
-            this.commandBarSeparator2.VisibleInOverflowMenu = false;
-            // 
             // commandBarSeparator3
             // 
             this.commandBarSeparator3.Name = "commandBarSeparator3";
             this.commandBarSeparator3.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1MoveNextItem
+            // 
+            this.radBindingNavigator1MoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveNextItem.Image")));
+            this.radBindingNavigator1MoveNextItem.Name = "radBindingNavigator1MoveNextItem";
+            this.radBindingNavigator1MoveNextItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveNextItem.SvgImageXml");
             // 
             // commandBarSeparator4
             // 
             this.commandBarSeparator4.Name = "commandBarSeparator4";
             this.commandBarSeparator4.VisibleInOverflowMenu = false;
             // 
+            // radBindingNavigator1MoveLastItem
+            // 
+            this.radBindingNavigator1MoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveLastItem.Image")));
+            this.radBindingNavigator1MoveLastItem.Name = "radBindingNavigator1MoveLastItem";
+            this.radBindingNavigator1MoveLastItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveLastItem.SvgImageXml");
+            // 
             // radBindingNavigator1SecondStrip
             // 
-            this.radBindingNavigator1SecondStrip.DesiredLocation = ((System.Drawing.PointF)(resources.GetObject("radBindingNavigator1SecondStrip.DesiredLocation")));
             this.radBindingNavigator1SecondStrip.DisplayName = "radBindingNavigator1SecondStrip";
             this.radBindingNavigator1SecondStrip.EnableDragging = false;
             // 
@@ -265,42 +288,6 @@
             ((Telerik.WinControls.UI.RadCommandBarGrip)(this.radBindingNavigator1SecondStrip.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.radBindingNavigator1SecondStrip.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
-            // commandBarSeparator5
-            // 
-            this.commandBarSeparator5.Name = "commandBarSeparator5";
-            this.commandBarSeparator5.VisibleInOverflowMenu = false;
-            // 
-            // commandBarRowElement1
-            // 
-            this.commandBarRowElement1.DisplayName = "commandBarRowElement1";
-            this.commandBarRowElement1.MinSize = new System.Drawing.Size(25, 25);
-            this.commandBarRowElement1.Name = "commandBarRowElement1";
-            // 
-            // radBindingNavigator1MoveFirstItem
-            // 
-            this.radBindingNavigator1MoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveFirstItem.Image")));
-            this.radBindingNavigator1MoveFirstItem.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.radBindingNavigator1MoveFirstItem.Name = "radBindingNavigator1MoveFirstItem";
-            this.radBindingNavigator1MoveFirstItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveFirstItem.SvgImageXml");
-            // 
-            // radBindingNavigator1MovePreviousItem
-            // 
-            this.radBindingNavigator1MovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MovePreviousItem.Image")));
-            this.radBindingNavigator1MovePreviousItem.Name = "radBindingNavigator1MovePreviousItem";
-            this.radBindingNavigator1MovePreviousItem.SvgImageXml = resources.GetString("radBindingNavigator1MovePreviousItem.SvgImageXml");
-            // 
-            // radBindingNavigator1MoveNextItem
-            // 
-            this.radBindingNavigator1MoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveNextItem.Image")));
-            this.radBindingNavigator1MoveNextItem.Name = "radBindingNavigator1MoveNextItem";
-            this.radBindingNavigator1MoveNextItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveNextItem.SvgImageXml");
-            // 
-            // radBindingNavigator1MoveLastItem
-            // 
-            this.radBindingNavigator1MoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveLastItem.Image")));
-            this.radBindingNavigator1MoveLastItem.Name = "radBindingNavigator1MoveLastItem";
-            this.radBindingNavigator1MoveLastItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveLastItem.SvgImageXml");
-            // 
             // radBindingNavigator1AddNewItem
             // 
             this.radBindingNavigator1AddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1AddNewItem.Image")));
@@ -308,12 +295,31 @@
             this.radBindingNavigator1AddNewItem.Name = "radBindingNavigator1AddNewItem";
             this.radBindingNavigator1AddNewItem.SvgImageXml = resources.GetString("radBindingNavigator1AddNewItem.SvgImageXml");
             // 
+            // commandBarSeparator5
+            // 
+            this.commandBarSeparator5.Name = "commandBarSeparator5";
+            this.commandBarSeparator5.VisibleInOverflowMenu = false;
+            // 
             // radBindingNavigator1DeleteItem
             // 
             this.radBindingNavigator1DeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1DeleteItem.Image")));
             this.radBindingNavigator1DeleteItem.Name = "radBindingNavigator1DeleteItem";
             this.radBindingNavigator1DeleteItem.SvgImageXml = resources.GetString("radBindingNavigator1DeleteItem.SvgImageXml");
             this.radBindingNavigator1DeleteItem.Click += new System.EventHandler(this.radBindingNavigator1DeleteItem_Click);
+            // 
+            // commandBarButton2
+            // 
+            this.commandBarButton2.DisplayName = "commandBarButton2";
+            this.commandBarButton2.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton2.Image")));
+            this.commandBarButton2.Name = "commandBarButton2";
+            this.commandBarButton2.Text = "Сохранить";
+            this.commandBarButton2.Click += new System.EventHandler(this.commandBarButton2_Click);
+            // 
+            // commandBarRowElement1
+            // 
+            this.commandBarRowElement1.DisplayName = "commandBarRowElement1";
+            this.commandBarRowElement1.MinSize = new System.Drawing.Size(25, 25);
+            this.commandBarRowElement1.Name = "commandBarRowElement1";
             // 
             // commandBarButton1
             // 
@@ -323,14 +329,6 @@
             this.commandBarButton1.SvgImageXml = resources.GetString("commandBarButton1.SvgImageXml");
             this.commandBarButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarButton1.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton2
-            // 
-            this.commandBarButton2.DisplayName = "commandBarButton2";
-            this.commandBarButton2.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton2.Image")));
-            this.commandBarButton2.Name = "commandBarButton2";
-            this.commandBarButton2.Text = "Сохранить";
-            this.commandBarButton2.Click += new System.EventHandler(this.commandBarButton2_Click);
             // 
             // ElectronicQueueForm
             // 
@@ -349,9 +347,9 @@
             this.Load += new System.EventHandler(this.ElectronicQueueForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);

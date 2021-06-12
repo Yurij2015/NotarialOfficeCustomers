@@ -15,5 +15,20 @@ namespace NotarialOfficeCustomers
         {
             InitializeComponent();
         }
+
+        private void commandBarButton2_Click(object sender, EventArgs e)
+        {
+            employeeTableAdapter.Update(notarialOfficeCustemersDataSet.employee);
+
+        }
+
+        private void FormEmployee_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.positon' table. You can move, or remove it, as needed.
+            this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
+
+        }
     }
 }

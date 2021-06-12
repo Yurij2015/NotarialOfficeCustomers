@@ -53,11 +53,17 @@ namespace NotarialOfficeCustomers
                 MessageBox.Show("Авторизация в системе прошла успешно!");
                 PanelForm panelForm = new PanelForm();
                 panelForm.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Ошибка входа в систему");
             }
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

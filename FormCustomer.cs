@@ -20,8 +20,16 @@ namespace NotarialOfficeCustomers
         {
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.notarialOfficeCustemersDataSet.customer);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
+
+        }
+
+        private void commandBarButton8_Click(object sender, EventArgs e)
+        {
+            customerTableAdapter.Update(notarialOfficeCustemersDataSet.customer);
+        }
+
+        private void radBindingNavigator2_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -50,7 +50,7 @@
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(133, 20);
             this.userName.TabIndex = 2;
-            this.userName.Text = "Логин";
+            this.userName.Text = "admin";
             this.userName.TextChanged += new System.EventHandler(this.radButtonTextBox1_TextChanged);
             // 
             // userPassword
@@ -59,7 +59,7 @@
             this.userPassword.Name = "userPassword";
             this.userPassword.Size = new System.Drawing.Size(133, 20);
             this.userPassword.TabIndex = 3;
-            this.userPassword.Text = "Пароль";
+            this.userPassword.Text = "123456";
             this.userPassword.TextChanged += new System.EventHandler(this.radButtonTextBox2_TextChanged);
             // 
             // radLabel1
@@ -113,6 +113,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Вход в систему";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();

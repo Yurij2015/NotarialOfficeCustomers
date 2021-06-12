@@ -33,24 +33,21 @@ namespace NotarialOfficeCustomers
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radButton3 = new Telerik.WinControls.UI.RadButton();
+            this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(357, 320);
+            this.radButton1.Location = new System.Drawing.Point(357, 26);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(149, 24);
             this.radButton1.TabIndex = 1;
@@ -67,18 +64,6 @@ namespace NotarialOfficeCustomers
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // radMenu1
-            // 
-            this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem1,
-            this.radMenuItem2,
-            this.radMenuItem3,
-            this.radMenuItem4});
-            this.radMenu1.Location = new System.Drawing.Point(0, 0);
-            this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(527, 20);
-            this.radMenu1.TabIndex = 4;
-            // 
             // radMenuItem1
             // 
             this.radMenuItem1.Name = "radMenuItem1";
@@ -88,6 +73,7 @@ namespace NotarialOfficeCustomers
             // 
             this.radMenuItem2.Name = "radMenuItem2";
             this.radMenuItem2.Text = "Вход в систему";
+            this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
             // 
             // radMenuItem3
             // 
@@ -95,23 +81,9 @@ namespace NotarialOfficeCustomers
             this.radMenuItem3.Text = "Закрыть";
             this.radMenuItem3.Click += new System.EventHandler(this.radMenuItem3_Click);
             // 
-            // radMenuItem4
-            // 
-            this.radMenuItem4.Name = "radMenuItem4";
-            this.radMenuItem4.Text = "Быстрая запись";
-            // 
-            // radButton2
-            // 
-            this.radButton2.Location = new System.Drawing.Point(357, 79);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(149, 24);
-            this.radButton2.TabIndex = 5;
-            this.radButton2.Text = "Быстрая запись";
-            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
-            // 
             // radButton3
             // 
-            this.radButton3.Location = new System.Drawing.Point(357, 109);
+            this.radButton3.Location = new System.Drawing.Point(357, 320);
             this.radButton3.Name = "radButton3";
             this.radButton3.Size = new System.Drawing.Size(149, 24);
             this.radButton3.TabIndex = 6;
@@ -123,8 +95,18 @@ namespace NotarialOfficeCustomers
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 359);
+            // 
+            // radMenu1
+            // 
+            this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem1,
+            this.radMenuItem2,
+            this.radMenuItem3});
+            this.radMenu1.Location = new System.Drawing.Point(0, 0);
+            this.radMenu1.Name = "radMenu1";
+            this.radMenu1.Size = new System.Drawing.Size(527, 20);
+            this.radMenu1.TabIndex = 4;
             this.Controls.Add(this.radButton3);
-            this.Controls.Add(this.radButton2);
             this.Controls.Add(this.radMenu1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.radButton1);
@@ -138,9 +120,8 @@ namespace NotarialOfficeCustomers
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,13 +133,11 @@ namespace NotarialOfficeCustomers
         private Telerik.WinControls.UI.RadButton radButton1;
         private Telerik.WinControls.RadThemeManager radThemeManager1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Telerik.WinControls.UI.RadMenu radMenu1;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem2;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
-        private Telerik.WinControls.UI.RadButton radButton2;
         private Telerik.WinControls.UI.RadButton radButton3;
+        private Telerik.WinControls.UI.RadMenu radMenu1;
     }
 }
 

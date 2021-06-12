@@ -48,5 +48,11 @@ namespace NotarialOfficeCustomers
             GuestAddOrder guestAddOrder = new GuestAddOrder();
             guestAddOrder.Show();
         }
+
+        private void radMenuItem2_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
     }
 }
