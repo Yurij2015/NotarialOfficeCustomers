@@ -35,11 +35,30 @@ namespace NotarialOfficeCustomers
 
         private void radButton1_Click(object sender, EventArgs e)
         {
-            string str = ConfigurationManager.ConnectionStrings["DBNotarialOfficeConnectionString"].ToString();
+            string connectionString = ConfigurationManager.ConnectionStrings["DBNotarialOfficeConnectionString"].ToString();
 
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            con.Open();
+            string login = userName.Text;
+            string password = userPassword.Text;
 
-            ElectronicQueueForm electronicQueueForm = new ElectronicQueueForm();
-            electronicQueueForm.Show();
+            SqlCommand cmd = new SqlCommand("SELECT userName, userPass FROM [user] WHERE userName = '" + login + "'AND userPass='" + password + "'", con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("Авторизация в системе прошла успешно!");
+                ElectronicQueueForm electronicQueueForm = new ElectronicQueueForm();
+                electronicQueueForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка входа в систему");
+            }
+
         }
     }
 }
