@@ -9,16 +9,11 @@ using Telerik.WinControls;
 
 namespace NotarialOfficeCustomers
 {
-    public partial class GuestAddOrder : Telerik.WinControls.UI.RadForm
+    public partial class FormPosition : Telerik.WinControls.UI.RadForm
     {
-        public GuestAddOrder()
+        public FormPosition()
         {
             InitializeComponent();
-        }
-
-        private void GuestAddOrder_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -51,8 +51,8 @@ namespace NotarialOfficeCustomers
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Авторизация в системе прошла успешно!");
-                ElectronicQueueForm electronicQueueForm = new ElectronicQueueForm();
-                electronicQueueForm.Show();
+                PanelForm panelForm = new PanelForm();
+                panelForm.Show();
             }
             else
             {

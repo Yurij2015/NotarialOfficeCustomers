@@ -15,5 +15,48 @@ namespace NotarialOfficeCustomers
         {
             InitializeComponent();
         }
+
+        private void ElectronicQueueForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.recording' table. You can move, or remove it, as needed.
+            this.recordingTableAdapter.Fill(this.notarialOfficeCustemersDataSet.recording);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.recording' table. You can move, or remove it, as needed.
+
+        }
+
+        private void nDataNavigator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radBindingNavigator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            recordingTableAdapter.Update(notarialOfficeCustemersDataSet.recording);
+        }
+
+        private void radGridView1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radBindingNavigator1DeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commandBarButton2_Click(object sender, EventArgs e)
+        {
+            recordingTableAdapter.Update(notarialOfficeCustemersDataSet.recording);
+        }
     }
 }

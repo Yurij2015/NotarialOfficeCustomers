@@ -1,6 +1,6 @@
 ﻿namespace NotarialOfficeCustomers
 {
-    partial class GuestAddOrder
+    partial class FormEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.notarialOfficeCustemersDataSet1 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // notarialOfficeCustemersDataSet1
-            // 
-            this.notarialOfficeCustemersDataSet1.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // GuestAddOrder
+            // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 404);
-            this.Name = "GuestAddOrder";
-            // 
-            // 
-            // 
-            this.RootElement.ApplyShapeToControl = true;
-            this.Text = "Быстрая запись в электронную очередь";
-            this.Load += new System.EventHandler(this.GuestAddOrder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet1)).EndInit();
+            this.Name = "FormEmployee";
+            this.Text = "FormEmployee";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet1;
     }
 }
