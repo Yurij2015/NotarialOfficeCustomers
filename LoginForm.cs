@@ -43,21 +43,36 @@ namespace NotarialOfficeCustomers
             string login = userName.Text;
             string password = userPassword.Text;
 
-            SqlCommand cmd = new SqlCommand("SELECT userName, userPass FROM [user] WHERE userName = '" + login + "'AND userPass='" + password + "'", con);
+            SqlCommand cmd = new SqlCommand("SELECT userName, userPass FROM [user] WHERE userName = '" + login + "'AND userPass='" + password + "' AND role = 'admin'", con);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Авторизация в системе прошла успешно!");
+                MessageBox.Show("Авторизация администратора в системе прошла успешно!");
                 PanelForm panelForm = new PanelForm();
                 panelForm.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Ошибка входа в систему");
+                SqlCommand cmdh = new SqlCommand("SELECT userName, userPass FROM [user] WHERE userName = '" + login + "'AND userPass='" + password + "'", con);
+
+                SqlDataAdapter dah = new SqlDataAdapter(cmdh);
+                DataTable dth = new DataTable();
+                dah.Fill(dth);
+                if (dth.Rows.Count > 0)
+                {
+                    MessageBox.Show("Авторизация помощника в системе прошла успешно!");
+                    PanelFormNoAdmin panelFormNoAdmin = new PanelFormNoAdmin();
+                    panelFormNoAdmin.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка входа в систему");
+                }
             }
 
         }

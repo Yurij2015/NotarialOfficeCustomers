@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomer));
             this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter();
-            this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
             this.radBindingNavigator2 = new Telerik.WinControls.UI.RadBindingNavigator();
             this.commandBarRowElement2 = new Telerik.WinControls.UI.CommandBarRowElement();
             this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
-            this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator6 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarButton3 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator7 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.commandBarTextBox1 = new Telerik.WinControls.UI.CommandBarTextBox();
             this.commandBarLabel1 = new Telerik.WinControls.UI.CommandBarLabel();
             this.commandBarSeparator8 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarButton4 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator9 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarButton5 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarStripElement2 = new Telerik.WinControls.UI.CommandBarStripElement();
-            this.commandBarButton6 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator10 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarButton3 = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarButton4 = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarButton5 = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarButton6 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarButton7 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarButton8 = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
@@ -87,65 +87,66 @@
             // 
             // 
             // 
+            this.radGridView1.MasterTemplate.AllowSearchRow = true;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "id";
-            gridViewDecimalColumn1.HeaderText = "Номер";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.Name = "id";
-            gridViewDecimalColumn1.ReadOnly = true;
-            gridViewDecimalColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
-            gridViewDecimalColumn1.Width = 77;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "fullName";
-            gridViewTextBoxColumn1.HeaderText = "ФИО клиента";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "fullName";
-            gridViewTextBoxColumn1.Width = 235;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "phone";
-            gridViewTextBoxColumn2.HeaderText = "Номер телефона";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "phone";
-            gridViewTextBoxColumn2.Width = 171;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "adress";
-            gridViewTextBoxColumn3.HeaderText = "Адрес";
-            gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "adress";
-            gridViewTextBoxColumn3.Width = 171;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "gender";
-            gridViewTextBoxColumn4.HeaderText = "Пол";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "gender";
-            gridViewTextBoxColumn4.Width = 87;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "passport";
-            gridViewTextBoxColumn5.HeaderText = "Паспорт";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "passport";
-            gridViewTextBoxColumn5.Width = 92;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "email";
-            gridViewTextBoxColumn6.HeaderText = "Email";
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.Name = "email";
-            gridViewTextBoxColumn6.Width = 153;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "id";
+            gridViewDecimalColumn2.HeaderText = "Номер";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "id";
+            gridViewDecimalColumn2.ReadOnly = true;
+            gridViewDecimalColumn2.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
+            gridViewDecimalColumn2.Width = 77;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "fullName";
+            gridViewTextBoxColumn7.HeaderText = "ФИО клиента";
+            gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Name = "fullName";
+            gridViewTextBoxColumn7.Width = 235;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "phone";
+            gridViewTextBoxColumn8.HeaderText = "Номер телефона";
+            gridViewTextBoxColumn8.IsAutoGenerated = true;
+            gridViewTextBoxColumn8.Name = "phone";
+            gridViewTextBoxColumn8.Width = 171;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "adress";
+            gridViewTextBoxColumn9.HeaderText = "Адрес";
+            gridViewTextBoxColumn9.IsAutoGenerated = true;
+            gridViewTextBoxColumn9.Name = "adress";
+            gridViewTextBoxColumn9.Width = 171;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "gender";
+            gridViewTextBoxColumn10.HeaderText = "Пол";
+            gridViewTextBoxColumn10.IsAutoGenerated = true;
+            gridViewTextBoxColumn10.Name = "gender";
+            gridViewTextBoxColumn10.Width = 87;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "passport";
+            gridViewTextBoxColumn11.HeaderText = "Паспорт";
+            gridViewTextBoxColumn11.IsAutoGenerated = true;
+            gridViewTextBoxColumn11.Name = "passport";
+            gridViewTextBoxColumn11.Width = 92;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
+            gridViewTextBoxColumn12.FieldName = "email";
+            gridViewTextBoxColumn12.HeaderText = "Email";
+            gridViewTextBoxColumn12.IsAutoGenerated = true;
+            gridViewTextBoxColumn12.Name = "email";
+            gridViewTextBoxColumn12.Width = 153;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12});
             this.radGridView1.MasterTemplate.DataSource = this.customerBindingSource;
-            sortDescriptor1.PropertyName = "id";
+            sortDescriptor2.PropertyName = "id";
             this.radGridView1.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor1});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            sortDescriptor2});
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView1.Size = new System.Drawing.Size(1001, 359);
@@ -159,16 +160,6 @@
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // commandBarButton2
-            // 
-            this.commandBarButton2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton2.DisplayName = "commandBarButton2";
-            this.commandBarButton2.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton2.Image")));
-            this.commandBarButton2.Name = "commandBarButton2";
-            this.commandBarButton2.Text = "Сохранить";
-            this.commandBarButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton2.UseCompatibleTextRendering = false;
             // 
             // commandBarRowElement1
             // 
@@ -235,16 +226,6 @@
             ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
-            // commandBarButton1
-            // 
-            this.commandBarButton1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
-            this.commandBarButton1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.commandBarButton1.Name = "commandBarButton1";
-            this.commandBarButton1.SvgImageXml = resources.GetString("commandBarButton1.SvgImageXml");
-            this.commandBarButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton1.UseCompatibleTextRendering = false;
-            // 
             // commandBarSeparator6
             // 
             this.commandBarSeparator6.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -252,15 +233,6 @@
             this.commandBarSeparator6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarSeparator6.UseCompatibleTextRendering = false;
             this.commandBarSeparator6.VisibleInOverflowMenu = false;
-            // 
-            // commandBarButton3
-            // 
-            this.commandBarButton3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton3.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton3.Image")));
-            this.commandBarButton3.Name = "commandBarButton3";
-            this.commandBarButton3.SvgImageXml = resources.GetString("commandBarButton3.SvgImageXml");
-            this.commandBarButton3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton3.UseCompatibleTextRendering = false;
             // 
             // commandBarSeparator7
             // 
@@ -294,15 +266,6 @@
             this.commandBarSeparator8.UseCompatibleTextRendering = false;
             this.commandBarSeparator8.VisibleInOverflowMenu = false;
             // 
-            // commandBarButton4
-            // 
-            this.commandBarButton4.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton4.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton4.Image")));
-            this.commandBarButton4.Name = "commandBarButton4";
-            this.commandBarButton4.SvgImageXml = resources.GetString("commandBarButton4.SvgImageXml");
-            this.commandBarButton4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton4.UseCompatibleTextRendering = false;
-            // 
             // commandBarSeparator9
             // 
             this.commandBarSeparator9.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -310,15 +273,6 @@
             this.commandBarSeparator9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarSeparator9.UseCompatibleTextRendering = false;
             this.commandBarSeparator9.VisibleInOverflowMenu = false;
-            // 
-            // commandBarButton5
-            // 
-            this.commandBarButton5.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton5.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton5.Image")));
-            this.commandBarButton5.Name = "commandBarButton5";
-            this.commandBarButton5.SvgImageXml = resources.GetString("commandBarButton5.SvgImageXml");
-            this.commandBarButton5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton5.UseCompatibleTextRendering = false;
             // 
             // commandBarStripElement2
             // 
@@ -344,6 +298,51 @@
             ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
+            // commandBarSeparator10
+            // 
+            this.commandBarSeparator10.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarSeparator10.Name = "commandBarSeparator10";
+            this.commandBarSeparator10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarSeparator10.UseCompatibleTextRendering = false;
+            this.commandBarSeparator10.VisibleInOverflowMenu = false;
+            // 
+            // commandBarButton1
+            // 
+            this.commandBarButton1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
+            this.commandBarButton1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.commandBarButton1.Name = "commandBarButton1";
+            this.commandBarButton1.SvgImageXml = resources.GetString("commandBarButton1.SvgImageXml");
+            this.commandBarButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton1.UseCompatibleTextRendering = false;
+            // 
+            // commandBarButton3
+            // 
+            this.commandBarButton3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton3.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton3.Image")));
+            this.commandBarButton3.Name = "commandBarButton3";
+            this.commandBarButton3.SvgImageXml = resources.GetString("commandBarButton3.SvgImageXml");
+            this.commandBarButton3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton3.UseCompatibleTextRendering = false;
+            // 
+            // commandBarButton4
+            // 
+            this.commandBarButton4.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton4.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton4.Image")));
+            this.commandBarButton4.Name = "commandBarButton4";
+            this.commandBarButton4.SvgImageXml = resources.GetString("commandBarButton4.SvgImageXml");
+            this.commandBarButton4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton4.UseCompatibleTextRendering = false;
+            // 
+            // commandBarButton5
+            // 
+            this.commandBarButton5.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton5.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton5.Image")));
+            this.commandBarButton5.Name = "commandBarButton5";
+            this.commandBarButton5.SvgImageXml = resources.GetString("commandBarButton5.SvgImageXml");
+            this.commandBarButton5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton5.UseCompatibleTextRendering = false;
+            // 
             // commandBarButton6
             // 
             this.commandBarButton6.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -353,14 +352,6 @@
             this.commandBarButton6.SvgImageXml = resources.GetString("commandBarButton6.SvgImageXml");
             this.commandBarButton6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarButton6.UseCompatibleTextRendering = false;
-            // 
-            // commandBarSeparator10
-            // 
-            this.commandBarSeparator10.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator10.Name = "commandBarSeparator10";
-            this.commandBarSeparator10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator10.UseCompatibleTextRendering = false;
-            this.commandBarSeparator10.VisibleInOverflowMenu = false;
             // 
             // commandBarButton7
             // 
@@ -382,6 +373,16 @@
             this.commandBarButton8.UseCompatibleTextRendering = false;
             this.commandBarButton8.Click += new System.EventHandler(this.commandBarButton8_Click);
             // 
+            // commandBarButton2
+            // 
+            this.commandBarButton2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton2.DisplayName = "commandBarButton2";
+            this.commandBarButton2.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton2.Image")));
+            this.commandBarButton2.Name = "commandBarButton2";
+            this.commandBarButton2.Text = "Сохранить";
+            this.commandBarButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.commandBarButton2.UseCompatibleTextRendering = false;
+            // 
             // FormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +390,7 @@
             this.ClientSize = new System.Drawing.Size(1001, 397);
             this.Controls.Add(this.radBindingNavigator2);
             this.Controls.Add(this.radGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCustomer";
             // 
             // 

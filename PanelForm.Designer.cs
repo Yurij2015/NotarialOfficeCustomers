@@ -35,11 +35,13 @@
             this.radButton4 = new Telerik.WinControls.UI.RadButton();
             this.label1 = new System.Windows.Forms.Label();
             this.radButton5 = new Telerik.WinControls.UI.RadButton();
+            this.radButton6 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,11 +100,21 @@
             this.radButton5.TabIndex = 4;
             this.radButton5.Text = "Закрыть";
             // 
+            // radButton6
+            // 
+            this.radButton6.Location = new System.Drawing.Point(193, 50);
+            this.radButton6.Name = "radButton6";
+            this.radButton6.Size = new System.Drawing.Size(110, 24);
+            this.radButton6.TabIndex = 5;
+            this.radButton6.Text = "Услуги";
+            this.radButton6.Click += new System.EventHandler(this.radButton6_Click);
+            // 
             // PanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 222);
+            this.Controls.Add(this.radButton6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radButton5);
             this.Controls.Add(this.radButton4);
@@ -122,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,5 +149,6 @@
         private Telerik.WinControls.UI.RadButton radButton4;
         private System.Windows.Forms.Label label1;
         private Telerik.WinControls.UI.RadButton radButton5;
+        private Telerik.WinControls.UI.RadButton radButton6;
     }
 }
