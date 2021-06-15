@@ -30,5 +30,10 @@ namespace NotarialOfficeCustomers
             this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
 
         }
+
+        private void radGridView1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
