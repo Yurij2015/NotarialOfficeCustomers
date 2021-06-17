@@ -99,6 +99,7 @@
             this.radButton5.Size = new System.Drawing.Size(110, 24);
             this.radButton5.TabIndex = 4;
             this.radButton5.Text = "Закрыть";
+            this.radButton5.Click += new System.EventHandler(this.radButton5_Click_1);
             // 
             // radButton6
             // 
@@ -127,6 +128,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Панель управления";
             this.Load += new System.EventHandler(this.PanelForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();

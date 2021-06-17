@@ -48,13 +48,17 @@ namespace NotarialOfficeCustomers
 
         private void PanelForm_Load(object sender, EventArgs e)
         {
-            this.Close();
         }
 
         private void radButton6_Click(object sender, EventArgs e)
         {
             FormService formServie = new FormService();
             formServie.Show();
+        }
+
+        private void radButton5_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -35,19 +35,23 @@ namespace NotarialOfficeCustomers
 
         private void radButton1_Click(object sender, EventArgs e)
         {
+            // строка подключаения, данные для подключения берутся с файла App.config через system.configuration
             string connectionString = ConfigurationManager.ConnectionStrings["DBNotarialOfficeConnectionString"].ToString();
 
+         
             SqlConnection con = new SqlConnection();
             con.ConnectionString = connectionString;
             con.Open();
+            // получение данных с формы
             string login = userName.Text;
             string password = userPassword.Text;
-
+            // запрос к базе данных на выборку с таблицы пользователей
             SqlCommand cmd = new SqlCommand("SELECT userName, userPass FROM [user] WHERE userName = '" + login + "'AND userPass='" + password + "' AND role = 'admin'", con);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            // если результат больше 0, то пользователь админ
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Авторизация администратора в системе прошла успешно!");
@@ -57,11 +61,13 @@ namespace NotarialOfficeCustomers
             }
             else
             {
+                // проверка автоирационных данных пользователя не админа
                 SqlCommand cmdh = new SqlCommand("SELECT userName, userPass FROM [user] WHERE userName = '" + login + "'AND userPass='" + password + "'", con);
 
                 SqlDataAdapter dah = new SqlDataAdapter(cmdh);
                 DataTable dth = new DataTable();
                 dah.Fill(dth);
+                // если есть результат, пользователь авторизован
                 if (dth.Rows.Count > 0)
                 {
                     MessageBox.Show("Авторизация помощника в системе прошла успешно!");

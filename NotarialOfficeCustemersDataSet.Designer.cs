@@ -1513,6 +1513,8 @@ namespace NotarialOfficeCustomers {
             
             private global::System.Data.DataColumn columnstatus;
             
+            private global::System.Data.DataColumn columnrecordtime;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public recordingDataTable() {
@@ -1628,6 +1630,14 @@ namespace NotarialOfficeCustomers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn recordtimeColumn {
+                get {
+                    return this.columnrecordtime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1663,7 +1673,7 @@ namespace NotarialOfficeCustomers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public recordingRow AddrecordingRow(string customerFullName, string phoneNumber, System.DateTime datetime, System.DateTime recorddate, string customerEmail, serviceRow parentserviceRowByFK_recording_service_idservice, employeeRow parentemployeeRowByFK_recording_employee_id, string cost, byte status) {
+            public recordingRow AddrecordingRow(string customerFullName, string phoneNumber, System.DateTime datetime, System.DateTime recorddate, string customerEmail, serviceRow parentserviceRowByFK_recording_service_idservice, employeeRow parentemployeeRowByFK_recording_employee_id, string cost, byte status, System.TimeSpan recordtime) {
                 recordingRow rowrecordingRow = ((recordingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1675,7 +1685,8 @@ namespace NotarialOfficeCustomers {
                         null,
                         null,
                         cost,
-                        status};
+                        status,
+                        recordtime};
                 if ((parentserviceRowByFK_recording_service_idservice != null)) {
                     columnValuesArray[6] = parentserviceRowByFK_recording_service_idservice[0];
                 }
@@ -1721,6 +1732,7 @@ namespace NotarialOfficeCustomers {
                 this.columnidemployee = base.Columns["idemployee"];
                 this.columncost = base.Columns["cost"];
                 this.columnstatus = base.Columns["status"];
+                this.columnrecordtime = base.Columns["recordtime"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1746,6 +1758,8 @@ namespace NotarialOfficeCustomers {
                 base.Columns.Add(this.columncost);
                 this.columnstatus = new global::System.Data.DataColumn("status", typeof(byte), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstatus);
+                this.columnrecordtime = new global::System.Data.DataColumn("recordtime", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecordtime);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -3084,6 +3098,22 @@ namespace NotarialOfficeCustomers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.TimeSpan recordtime {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tablerecording.recordtimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'recordtime\' in table \'recording\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerecording.recordtimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public employeeRow employeeRow {
                 get {
                     return ((employeeRow)(this.GetParentRow(this.Table.ParentRelations["FK_recording_employee_id"])));
@@ -3150,6 +3180,18 @@ namespace NotarialOfficeCustomers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetstatusNull() {
                 this[this.tablerecording.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsrecordtimeNull() {
+                return this.IsNull(this.tablerecording.recordtimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetrecordtimeNull() {
+                this[this.tablerecording.recordtimeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4961,17 +5003,22 @@ SELECT id, positionName, desctiption FROM positon WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("idemployee", "idemployee");
             tableMapping.ColumnMappings.Add("cost", "cost");
             tableMapping.ColumnMappings.Add("status", "status");
+            tableMapping.ColumnMappings.Add("recordtime", "recordtime");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [recording] WHERE (([id] = @Original_id) AND ([customerFullName] = @Original_customerFullName) AND ([phoneNumber] = @Original_phoneNumber) AND ([datetime] = @Original_datetime) AND ((@IsNull_recorddate = 1 AND [recorddate] IS NULL) OR ([recorddate] = @Original_recorddate)) AND ([customerEmail] = @Original_customerEmail) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)) AND ((@IsNull_idemployee = 1 AND [idemployee] IS NULL) OR ([idemployee] = @Original_idemployee)) AND ((@IsNull_idservice = 1 AND [idservice] IS NULL) OR ([idservice] = @Original_idservice)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [recording] WHERE (([id] = @Original_id) AND ((@IsNull_customerFullName = 1 AND [customerFullName] IS NULL) OR ([customerFullName] = @Original_customerFullName)) AND ((@IsNull_phoneNumber = 1 AND [phoneNumber] IS NULL) OR ([phoneNumber] = @Original_phoneNumber)) AND ((@IsNull_datetime = 1 AND [datetime] IS NULL) OR ([datetime] = @Original_datetime)) AND ((@IsNull_recorddate = 1 AND [recorddate] IS NULL) OR ([recorddate] = @Original_recorddate)) AND ((@IsNull_customerEmail = 1 AND [customerEmail] IS NULL) OR ([customerEmail] = @Original_customerEmail)) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)) AND ((@IsNull_idemployee = 1 AND [idemployee] IS NULL) OR ([idemployee] = @Original_idemployee)) AND ((@IsNull_idservice = 1 AND [idservice] IS NULL) OR ([idservice] = @Original_idservice)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)) AND ((@IsNull_recordtime = 1 AND [recordtime] IS NULL) OR ([recordtime] = @Original_recordtime)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_customerFullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerFullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerFullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerFullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_phoneNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phoneNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_datetime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_recorddate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recorddate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_recorddate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recorddate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_customerEmail", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerEmail", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerEmail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerEmail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cost", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cost", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4981,10 +5028,12 @@ SELECT id, positionName, desctiption FROM positon WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idservice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idservice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_recordtime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recordtime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_recordtime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recordtime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [recording] ([customerFullName], [phoneNumber], [datetime], [recorddate], [customerEmail], [cost], [idemployee], [idservice], [status]) VALUES (@customerFullName, @phoneNumber, @datetime, @recorddate, @customerEmail, @cost, @idemployee, @idservice, @status);
-SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, cost, idemployee, idservice, status FROM recording WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [recording] ([customerFullName], [phoneNumber], [datetime], [recorddate], [customerEmail], [cost], [idemployee], [idservice], [status], [recordtime]) VALUES (@customerFullName, @phoneNumber, @datetime, @recorddate, @customerEmail, @cost, @idemployee, @idservice, @status, @recordtime);
+SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, cost, idemployee, idservice, status, recordtime FROM recording WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerFullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerFullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phoneNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4995,10 +5044,11 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idemployee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idemployee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idservice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idservice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@recordtime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recordtime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [recording] SET [customerFullName] = @customerFullName, [phoneNumber] = @phoneNumber, [datetime] = @datetime, [recorddate] = @recorddate, [customerEmail] = @customerEmail, [cost] = @cost, [idemployee] = @idemployee, [idservice] = @idservice, [status] = @status WHERE (([id] = @Original_id) AND ([customerFullName] = @Original_customerFullName) AND ([phoneNumber] = @Original_phoneNumber) AND ([datetime] = @Original_datetime) AND ((@IsNull_recorddate = 1 AND [recorddate] IS NULL) OR ([recorddate] = @Original_recorddate)) AND ([customerEmail] = @Original_customerEmail) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)) AND ((@IsNull_idemployee = 1 AND [idemployee] IS NULL) OR ([idemployee] = @Original_idemployee)) AND ((@IsNull_idservice = 1 AND [idservice] IS NULL) OR ([idservice] = @Original_idservice)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)));
-SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, cost, idemployee, idservice, status FROM recording WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [recording] SET [customerFullName] = @customerFullName, [phoneNumber] = @phoneNumber, [datetime] = @datetime, [recorddate] = @recorddate, [customerEmail] = @customerEmail, [cost] = @cost, [idemployee] = @idemployee, [idservice] = @idservice, [status] = @status, [recordtime] = @recordtime WHERE (([id] = @Original_id) AND ((@IsNull_customerFullName = 1 AND [customerFullName] IS NULL) OR ([customerFullName] = @Original_customerFullName)) AND ((@IsNull_phoneNumber = 1 AND [phoneNumber] IS NULL) OR ([phoneNumber] = @Original_phoneNumber)) AND ((@IsNull_datetime = 1 AND [datetime] IS NULL) OR ([datetime] = @Original_datetime)) AND ((@IsNull_recorddate = 1 AND [recorddate] IS NULL) OR ([recorddate] = @Original_recorddate)) AND ((@IsNull_customerEmail = 1 AND [customerEmail] IS NULL) OR ([customerEmail] = @Original_customerEmail)) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)) AND ((@IsNull_idemployee = 1 AND [idemployee] IS NULL) OR ([idemployee] = @Original_idemployee)) AND ((@IsNull_idservice = 1 AND [idservice] IS NULL) OR ([idservice] = @Original_idservice)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)) AND ((@IsNull_recordtime = 1 AND [recordtime] IS NULL) OR ([recordtime] = @Original_recordtime)));
+SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, cost, idemployee, idservice, status, recordtime FROM recording WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerFullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerFullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phoneNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5009,12 +5059,17 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idemployee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idemployee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idservice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idservice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@recordtime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recordtime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_customerFullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerFullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerFullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerFullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_phoneNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phoneNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_datetime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_recorddate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recorddate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_recorddate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recorddate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_customerEmail", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerEmail", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerEmail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerEmail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cost", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cost", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5024,6 +5079,8 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idservice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idservice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_recordtime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recordtime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_recordtime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "recordtime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -5041,7 +5098,7 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, co" +
-                "st, idemployee, idservice, status FROM recording";
+                "st, idemployee, idservice, status, recordtime FROM recording";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5102,66 +5159,87 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_customerFullName, string Original_phoneNumber, System.DateTime Original_datetime, global::System.Nullable<global::System.DateTime> Original_recorddate, string Original_customerEmail, string Original_cost, global::System.Nullable<int> Original_idemployee, global::System.Nullable<int> Original_idservice, global::System.Nullable<byte> Original_status) {
+        public virtual int Delete(int Original_id, string Original_customerFullName, string Original_phoneNumber, global::System.Nullable<global::System.DateTime> Original_datetime, global::System.Nullable<global::System.DateTime> Original_recorddate, string Original_customerEmail, string Original_cost, global::System.Nullable<int> Original_idemployee, global::System.Nullable<int> Original_idservice, global::System.Nullable<byte> Original_status, global::System.Nullable<global::System.TimeSpan> Original_recordtime) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_customerFullName == null)) {
-                throw new global::System.ArgumentNullException("Original_customerFullName");
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_customerFullName));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_customerFullName));
             }
             if ((Original_phoneNumber == null)) {
-                throw new global::System.ArgumentNullException("Original_phoneNumber");
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_phoneNumber));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_phoneNumber));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_datetime));
+            if ((Original_datetime.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_datetime.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             if ((Original_recorddate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_recorddate.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_recorddate.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_customerEmail == null)) {
-                throw new global::System.ArgumentNullException("Original_customerEmail");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_customerEmail));
-            }
-            if ((Original_cost == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_cost));
-            }
-            if ((Original_idemployee.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_idemployee.Value));
-            }
-            else {
+            if ((Original_customerEmail == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_idservice.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_idservice.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_customerEmail));
+            }
+            if ((Original_cost == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_status.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_cost));
+            }
+            if ((Original_idemployee.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((byte)(Original_status.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_idemployee.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_idservice.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_idservice.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_status.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((byte)(Original_status.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_recordtime.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.TimeSpan)(Original_recordtime.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5183,20 +5261,25 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string customerFullName, string phoneNumber, System.DateTime datetime, global::System.Nullable<global::System.DateTime> recorddate, string customerEmail, string cost, global::System.Nullable<int> idemployee, global::System.Nullable<int> idservice, global::System.Nullable<byte> status) {
+        public virtual int Insert(string customerFullName, string phoneNumber, global::System.Nullable<global::System.DateTime> datetime, global::System.Nullable<global::System.DateTime> recorddate, string customerEmail, string cost, global::System.Nullable<int> idemployee, global::System.Nullable<int> idservice, global::System.Nullable<byte> status, global::System.Nullable<global::System.TimeSpan> recordtime) {
             if ((customerFullName == null)) {
-                throw new global::System.ArgumentNullException("customerFullName");
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(customerFullName));
             }
             if ((phoneNumber == null)) {
-                throw new global::System.ArgumentNullException("phoneNumber");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(phoneNumber));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(datetime));
+            if ((datetime.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(datetime.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             if ((recorddate.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(recorddate.Value));
             }
@@ -5204,7 +5287,7 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((customerEmail == null)) {
-                throw new global::System.ArgumentNullException("customerEmail");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(customerEmail));
@@ -5233,6 +5316,12 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((recordtime.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.TimeSpan)(recordtime.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5256,37 +5345,44 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
         public virtual int Update(
                     string customerFullName, 
                     string phoneNumber, 
-                    System.DateTime datetime, 
+                    global::System.Nullable<global::System.DateTime> datetime, 
                     global::System.Nullable<global::System.DateTime> recorddate, 
                     string customerEmail, 
                     string cost, 
                     global::System.Nullable<int> idemployee, 
                     global::System.Nullable<int> idservice, 
                     global::System.Nullable<byte> status, 
+                    global::System.Nullable<global::System.TimeSpan> recordtime, 
                     int Original_id, 
                     string Original_customerFullName, 
                     string Original_phoneNumber, 
-                    System.DateTime Original_datetime, 
+                    global::System.Nullable<global::System.DateTime> Original_datetime, 
                     global::System.Nullable<global::System.DateTime> Original_recorddate, 
                     string Original_customerEmail, 
                     string Original_cost, 
                     global::System.Nullable<int> Original_idemployee, 
                     global::System.Nullable<int> Original_idservice, 
                     global::System.Nullable<byte> Original_status, 
+                    global::System.Nullable<global::System.TimeSpan> Original_recordtime, 
                     int id) {
             if ((customerFullName == null)) {
-                throw new global::System.ArgumentNullException("customerFullName");
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(customerFullName));
             }
             if ((phoneNumber == null)) {
-                throw new global::System.ArgumentNullException("phoneNumber");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(phoneNumber));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(datetime));
+            if ((datetime.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(datetime.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             if ((recorddate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(recorddate.Value));
             }
@@ -5294,7 +5390,7 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((customerEmail == null)) {
-                throw new global::System.ArgumentNullException("customerEmail");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(customerEmail));
@@ -5323,67 +5419,94 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id));
-            if ((Original_customerFullName == null)) {
-                throw new global::System.ArgumentNullException("Original_customerFullName");
+            if ((recordtime.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.TimeSpan)(recordtime.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_customerFullName));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id));
+            if ((Original_customerFullName == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_customerFullName));
             }
             if ((Original_phoneNumber == null)) {
-                throw new global::System.ArgumentNullException("Original_phoneNumber");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_phoneNumber));
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_datetime));
-            if ((Original_recorddate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_recorddate.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_customerEmail == null)) {
-                throw new global::System.ArgumentNullException("Original_customerEmail");
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_phoneNumber));
+            }
+            if ((Original_datetime.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_datetime.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_customerEmail));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_recorddate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_recorddate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_customerEmail == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_customerEmail));
             }
             if ((Original_cost == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_cost));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_cost));
             }
             if ((Original_idemployee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_idemployee.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_idemployee.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             if ((Original_idservice.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_idservice.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_idservice.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             if ((Original_status.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((byte)(Original_status.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((byte)(Original_status.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(id));
+            if ((Original_recordtime.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((System.TimeSpan)(Original_recordtime.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5407,24 +5530,26 @@ SELECT id, customerFullName, phoneNumber, datetime, recorddate, customerEmail, c
         public virtual int Update(
                     string customerFullName, 
                     string phoneNumber, 
-                    System.DateTime datetime, 
+                    global::System.Nullable<global::System.DateTime> datetime, 
                     global::System.Nullable<global::System.DateTime> recorddate, 
                     string customerEmail, 
                     string cost, 
                     global::System.Nullable<int> idemployee, 
                     global::System.Nullable<int> idservice, 
                     global::System.Nullable<byte> status, 
+                    global::System.Nullable<global::System.TimeSpan> recordtime, 
                     int Original_id, 
                     string Original_customerFullName, 
                     string Original_phoneNumber, 
-                    System.DateTime Original_datetime, 
+                    global::System.Nullable<global::System.DateTime> Original_datetime, 
                     global::System.Nullable<global::System.DateTime> Original_recorddate, 
                     string Original_customerEmail, 
                     string Original_cost, 
                     global::System.Nullable<int> Original_idemployee, 
                     global::System.Nullable<int> Original_idservice, 
-                    global::System.Nullable<byte> Original_status) {
-            return this.Update(customerFullName, phoneNumber, datetime, recorddate, customerEmail, cost, idemployee, idservice, status, Original_id, Original_customerFullName, Original_phoneNumber, Original_datetime, Original_recorddate, Original_customerEmail, Original_cost, Original_idemployee, Original_idservice, Original_status, Original_id);
+                    global::System.Nullable<byte> Original_status, 
+                    global::System.Nullable<global::System.TimeSpan> Original_recordtime) {
+            return this.Update(customerFullName, phoneNumber, datetime, recorddate, customerEmail, cost, idemployee, idservice, status, recordtime, Original_id, Original_customerFullName, Original_phoneNumber, Original_datetime, Original_recorddate, Original_customerEmail, Original_cost, Original_idemployee, Original_idservice, Original_status, Original_recordtime, Original_id);
         }
     }
     
