@@ -25,7 +25,16 @@ namespace NotarialOfficeCustomers
 
         private void commandBarButton2_Click(object sender, EventArgs e)
         {
-            positonTableAdapter.Update(notarialOfficeCustemersDataSet.positon);
+            try
+            {
+                positonTableAdapter2.Update(notarialOfficeCustemersDataSet2.positon);
+            }
+            catch
+            {
+                MessageBox.Show("Запись не можеть быть удалена, есть связанные записи!");
+                this.positonTableAdapter2.Fill(this.notarialOfficeCustemersDataSet2.positon);
+
+            }
         }
     }
 }

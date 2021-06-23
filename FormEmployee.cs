@@ -24,6 +24,8 @@ namespace NotarialOfficeCustomers
 
         private void FormEmployee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.specialization' table. You can move, or remove it, as needed.
+            this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet.specialization);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.positon' table. You can move, or remove it, as needed.
             this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.employee' table. You can move, or remove it, as needed.
@@ -34,6 +36,22 @@ namespace NotarialOfficeCustomers
         private void radGridView1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                employeeTableAdapter.Update(notarialOfficeCustemersDataSet.employee);
+            }
+            catch
+            {
+                MessageBox.Show("Запись не может быть удалена. Есть связанные записи!");
+                this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet.specialization);
+                this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
+                this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
+
+            }
         }
     }
 }

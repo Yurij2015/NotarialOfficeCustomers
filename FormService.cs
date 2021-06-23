@@ -27,5 +27,20 @@ namespace NotarialOfficeCustomers
         private void commandBarButton2_Click(object sender, EventArgs e)
         {
         }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                serviceTableAdapter.Update(notarialOfficeCustemersDataSet.service);
+
+            }
+            catch
+            {
+                MessageBox.Show("Запись не может быть удалена. Есть связанные записи!");
+                this.serviceTableAdapter.Fill(this.notarialOfficeCustemersDataSet.service);
+
+            }
+        }
     }
 }

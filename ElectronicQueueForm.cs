@@ -16,10 +16,6 @@ namespace NotarialOfficeCustomers
         public ElectronicQueueForm()
         {
             InitializeComponent();
-            DataFilterLocalizationProvider.CurrentProvider = new RussianDataFilterLocalizationProvider();
-            RadGridLocalizationProvider.CurrentProvider = new RussianRadGridLocalizationProvider();
-
-
         }
 
         private void ElectronicQueueForm_Load(object sender, EventArgs e)
@@ -82,8 +78,14 @@ namespace NotarialOfficeCustomers
 
         private void radButton1_Click(object sender, EventArgs e)
         {
-            recordingTableAdapterQueue.Update(notarialOfficeCustemersDataSetQueue.recording);
-
+            try
+            {
+                recordingTableAdapterQueue.Update(notarialOfficeCustemersDataSetQueue.recording);
+            }
+            catch
+            {
+                MessageBox.Show("Запись не может быть добавлена! Выберите другое время");
+            }
         }
     }
 }
