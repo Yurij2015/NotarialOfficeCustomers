@@ -31,7 +31,7 @@ namespace NotarialOfficeCustomers
             }
             catch
             {
-                MessageBox.Show("Запись не можеть быть удалена, есть связанные записи!");
+                MessageBox.Show("Ошибка обработки данных!");
                 this.positonTableAdapter2.Fill(this.notarialOfficeCustemersDataSet2.positon);
 
             }

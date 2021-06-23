@@ -96,6 +96,12 @@
     <Compile Include="ElectronicQueueForm.Designer.cs">
       <DependentUpon>ElectronicQueueForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NotarialOfficeCustemersDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NotarialOfficeCustemersDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotarialOfficeCustemersDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +172,9 @@
     <Compile Include="RussianDataFilterLocalizationProvider .cs" />
     <EmbeddedResource Include="ElectronicQueueForm.resx">
       <DependentUpon>ElectronicQueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
@@ -211,6 +225,17 @@
     </None>
     <None Include="NotarialOfficeCustemersDataSet.xss">
       <DependentUpon>NotarialOfficeCustemersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NotarialOfficeCustemersDataSet1.xsc">
+      <DependentUpon>NotarialOfficeCustemersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NotarialOfficeCustemersDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NotarialOfficeCustemersDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NotarialOfficeCustemersDataSet1.xss">
+      <DependentUpon>NotarialOfficeCustemersDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

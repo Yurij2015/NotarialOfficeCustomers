@@ -24,6 +24,8 @@ namespace NotarialOfficeCustomers
 
         private void FormEmployee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter1.Fill(this.notarialOfficeCustemersDataSet11.employee);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.specialization' table. You can move, or remove it, as needed.
             this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet.specialization);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.positon' table. You can move, or remove it, as needed.
@@ -46,7 +48,7 @@ namespace NotarialOfficeCustomers
             }
             catch
             {
-                MessageBox.Show("Запись не может быть удалена. Есть связанные записи!");
+                MessageBox.Show("Ошибка обработки данных!");
                 this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet.specialization);
                 this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
                 this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);

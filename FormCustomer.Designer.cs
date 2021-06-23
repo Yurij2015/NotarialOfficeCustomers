@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn3 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn1 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomer));
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSet4 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
+            this.notarialOfficeCustemersDataSet3 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.notarialOfficeCustemersDataSet2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSet13 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
             this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -82,24 +85,43 @@
             this.radBindingNavigator2AddNewItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator10 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.radBindingNavigator2DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.notarialOfficeCustemersDataSet11 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
+            this.genderTableAdapter1 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.genderTableAdapter();
+            this.notarialOfficeCustemersDataSet12 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
+            this.customerTableAdapter3 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.customerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).BeginInit();
             this.radBindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator2)).BeginInit();
             this.radBindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // genderBindingSource
             // 
             this.genderBindingSource.DataMember = "gender";
-            this.genderBindingSource.DataSource = this.notarialOfficeCustemersDataSet2;
+            this.genderBindingSource.DataSource = this.notarialOfficeCustemersDataSet4;
+            // 
+            // notarialOfficeCustemersDataSet4
+            // 
+            this.notarialOfficeCustemersDataSet4.DataSetName = "NotarialOfficeCustemersDataSet";
+            this.notarialOfficeCustemersDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // notarialOfficeCustemersDataSet3
+            // 
+            this.notarialOfficeCustemersDataSet3.DataSetName = "NotarialOfficeCustemersDataSet";
+            this.notarialOfficeCustemersDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // notarialOfficeCustemersDataSet2
             // 
@@ -119,67 +141,66 @@
             // 
             this.radGridView1.MasterTemplate.AllowSearchRow = true;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn5.DataType = typeof(int);
-            gridViewDecimalColumn5.EnableExpressionEditor = false;
-            gridViewDecimalColumn5.FieldName = "id";
-            gridViewDecimalColumn5.HeaderText = "Номер";
-            gridViewDecimalColumn5.IsAutoGenerated = true;
-            gridViewDecimalColumn5.Name = "id";
-            gridViewDecimalColumn5.ReadOnly = true;
-            gridViewDecimalColumn5.Width = 64;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "fullName";
-            gridViewTextBoxColumn9.HeaderText = "ФИО";
-            gridViewTextBoxColumn9.IsAutoGenerated = true;
-            gridViewTextBoxColumn9.Name = "fullName";
-            gridViewTextBoxColumn9.Width = 201;
-            gridViewDecimalColumn6.DataType = typeof(int);
-            gridViewDecimalColumn6.EnableExpressionEditor = false;
-            gridViewDecimalColumn6.FieldName = "phone";
-            gridViewDecimalColumn6.HeaderText = "Номер телефона";
-            gridViewDecimalColumn6.IsAutoGenerated = true;
-            gridViewDecimalColumn6.Name = "phone";
-            gridViewDecimalColumn6.Width = 114;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "adress";
-            gridViewTextBoxColumn10.HeaderText = "Адрес";
-            gridViewTextBoxColumn10.IsAutoGenerated = true;
-            gridViewTextBoxColumn10.Name = "adress";
-            gridViewTextBoxColumn10.Width = 244;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "passport";
-            gridViewTextBoxColumn11.HeaderText = "Паспорт";
-            gridViewTextBoxColumn11.IsAutoGenerated = true;
-            gridViewTextBoxColumn11.Name = "passport";
-            gridViewTextBoxColumn11.Width = 99;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "email";
-            gridViewTextBoxColumn12.HeaderText = "Электронный адрес";
-            gridViewTextBoxColumn12.IsAutoGenerated = true;
-            gridViewTextBoxColumn12.Name = "email";
-            gridViewTextBoxColumn12.Width = 178;
-            gridViewComboBoxColumn3.DataSource = this.genderBindingSource;
-            gridViewComboBoxColumn3.DataType = typeof(int);
-            gridViewComboBoxColumn3.DisplayMember = "value";
-            gridViewComboBoxColumn3.EnableExpressionEditor = false;
-            gridViewComboBoxColumn3.FieldName = "gender";
-            gridViewComboBoxColumn3.HeaderText = "Пол";
-            gridViewComboBoxColumn3.Name = "gender";
-            gridViewComboBoxColumn3.ValueMember = "id";
-            gridViewComboBoxColumn3.Width = 71;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "id";
+            gridViewDecimalColumn1.HeaderText = "Номер";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "id";
+            gridViewDecimalColumn1.ReadOnly = true;
+            gridViewDecimalColumn1.Width = 66;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "fullName";
+            gridViewTextBoxColumn1.HeaderText = "ФИО";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "fullName";
+            gridViewTextBoxColumn1.Width = 210;
+            gridViewDecimalColumn2.DataType = typeof(long);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "phone";
+            gridViewDecimalColumn2.HeaderText = "Номер телефона";
+            gridViewDecimalColumn2.Name = "phone1";
+            gridViewDecimalColumn2.Width = 83;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "adress";
+            gridViewTextBoxColumn2.HeaderText = "Адрес";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "adress";
+            gridViewTextBoxColumn2.Width = 253;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "passport";
+            gridViewTextBoxColumn3.HeaderText = "Паспорт";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "passport";
+            gridViewTextBoxColumn3.Width = 102;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "email";
+            gridViewTextBoxColumn4.HeaderText = "Электронный адрес";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "email";
+            gridViewTextBoxColumn4.Width = 185;
+            gridViewComboBoxColumn1.DataSource = this.genderBindingSource;
+            gridViewComboBoxColumn1.DataType = typeof(int);
+            gridViewComboBoxColumn1.DisplayMember = "value";
+            gridViewComboBoxColumn1.EnableExpressionEditor = false;
+            gridViewComboBoxColumn1.FieldName = "gender";
+            gridViewComboBoxColumn1.HeaderText = "Пол";
+            gridViewComboBoxColumn1.Name = "gender";
+            gridViewComboBoxColumn1.ValueMember = "id";
+            gridViewComboBoxColumn1.Width = 72;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn5,
-            gridViewTextBoxColumn9,
-            gridViewDecimalColumn6,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewComboBoxColumn3});
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewComboBoxColumn1});
             this.radGridView1.MasterTemplate.DataSource = this.customerBindingSource2;
             this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
             this.radGridView1.MasterTemplate.EnableFiltering = true;
             this.radGridView1.MasterTemplate.EnablePaging = true;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView1.Size = new System.Drawing.Size(1001, 470);
@@ -189,7 +210,12 @@
             // customerBindingSource2
             // 
             this.customerBindingSource2.DataMember = "customer";
-            this.customerBindingSource2.DataSource = this.notarialOfficeCustemersDataSet2;
+            this.customerBindingSource2.DataSource = this.notarialOfficeCustemersDataSet13;
+            // 
+            // notarialOfficeCustemersDataSet13
+            // 
+            this.notarialOfficeCustemersDataSet13.DataSetName = "NotarialOfficeCustemersDataSet1";
+            this.notarialOfficeCustemersDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radBindingNavigator1
             // 
@@ -519,6 +545,24 @@
             this.radBindingNavigator2DeleteItem.Name = "radBindingNavigator2DeleteItem";
             this.radBindingNavigator2DeleteItem.SvgImageXml = resources.GetString("radBindingNavigator2DeleteItem.SvgImageXml");
             // 
+            // notarialOfficeCustemersDataSet11
+            // 
+            this.notarialOfficeCustemersDataSet11.DataSetName = "NotarialOfficeCustemersDataSet1";
+            this.notarialOfficeCustemersDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // genderTableAdapter1
+            // 
+            this.genderTableAdapter1.ClearBeforeFill = true;
+            // 
+            // notarialOfficeCustemersDataSet12
+            // 
+            this.notarialOfficeCustemersDataSet12.DataSetName = "NotarialOfficeCustemersDataSet1";
+            this.notarialOfficeCustemersDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter3
+            // 
+            this.customerTableAdapter3.ClearBeforeFill = true;
+            // 
             // FormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,10 +579,13 @@
             this.Text = "Клиенты нотариальной конторы";
             this.Load += new System.EventHandler(this.FormCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).EndInit();
             this.radBindingNavigator1.ResumeLayout(false);
             this.radBindingNavigator1.PerformLayout();
@@ -547,6 +594,8 @@
             this.radBindingNavigator2.ResumeLayout(false);
             this.radBindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -602,5 +651,12 @@
         private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator10;
         private Telerik.WinControls.UI.CommandBarButton radBindingNavigator2DeleteItem;
         private Telerik.WinControls.UI.RadButton radButton2;
+        private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet11;
+        private NotarialOfficeCustemersDataSet1TableAdapters.genderTableAdapter genderTableAdapter1;
+        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet3;
+        private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet12;
+        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet4;
+        private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet13;
+        private NotarialOfficeCustemersDataSet1TableAdapters.customerTableAdapter customerTableAdapter3;
     }
 }

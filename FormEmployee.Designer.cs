@@ -38,11 +38,14 @@
             Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn1 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
             Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn2 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.positonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
+            this.specializationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSet11 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
             this.radBindingNavigator1FirstStrip = new Telerik.WinControls.UI.CommandBarStripElement();
@@ -72,19 +75,20 @@
             this.employeeTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.employeeTableAdapter();
             this.positonTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter();
             this.positonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.specializationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.specializationTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.specializationTableAdapter();
+            this.employeeTableAdapter1 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.employeeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specializationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).BeginInit();
             this.radBindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.specializationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +101,11 @@
             // 
             this.notarialOfficeCustemersDataSet.DataSetName = "NotarialOfficeCustemersDataSet";
             this.notarialOfficeCustemersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // specializationBindingSource
+            // 
+            this.specializationBindingSource.DataMember = "specialization";
+            this.specializationBindingSource.DataSource = this.notarialOfficeCustemersDataSet;
             // 
             // radBindingNavigator1
             // 
@@ -114,7 +123,12 @@
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataMember = "employee";
-            this.employeeBindingSource.DataSource = this.notarialOfficeCustemersDataSet;
+            this.employeeBindingSource.DataSource = this.notarialOfficeCustemersDataSet11;
+            // 
+            // notarialOfficeCustemersDataSet11
+            // 
+            this.notarialOfficeCustemersDataSet11.DataSetName = "NotarialOfficeCustemersDataSet1";
+            this.notarialOfficeCustemersDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radButton2
             // 
@@ -340,19 +354,24 @@
             gridViewTextBoxColumn1.HeaderText = "ФИО сотрудника";
             gridViewTextBoxColumn1.IsAutoGenerated = true;
             gridViewTextBoxColumn1.Name = "fullName";
-            gridViewTextBoxColumn1.Width = 149;
+            gridViewTextBoxColumn1.Width = 151;
             gridViewDateTimeColumn1.EnableExpressionEditor = false;
             gridViewDateTimeColumn1.FieldName = "birthDate";
             gridViewDateTimeColumn1.HeaderText = "Дата рождения";
             gridViewDateTimeColumn1.IsAutoGenerated = true;
             gridViewDateTimeColumn1.Name = "birthDate";
             gridViewDateTimeColumn1.Width = 117;
-            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.DataType = typeof(long);
             gridViewDecimalColumn2.EnableExpressionEditor = false;
             gridViewDecimalColumn2.FieldName = "phone";
             gridViewDecimalColumn2.HeaderText = "Номер телефона";
+            gridViewDecimalColumn2.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
             gridViewDecimalColumn2.Minimum = new decimal(new int[] {
-            123,
+            0,
             0,
             0,
             0});
@@ -387,7 +406,13 @@
             gridViewTextBoxColumn3.HeaderText = "Детали";
             gridViewTextBoxColumn3.IsAutoGenerated = true;
             gridViewTextBoxColumn3.Name = "detail";
-            gridViewTextBoxColumn3.Width = 213;
+            gridViewTextBoxColumn3.Width = 211;
+            gridViewDecimalColumn3.EnableExpressionEditor = false;
+            gridViewDecimalColumn3.FieldName = "phone";
+            gridViewDecimalColumn3.HeaderText = "column1";
+            gridViewDecimalColumn3.IsVisible = false;
+            gridViewDecimalColumn3.Name = "phone11";
+            gridViewDecimalColumn3.Width = 47;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
@@ -396,7 +421,8 @@
             gridViewTextBoxColumn2,
             gridViewComboBoxColumn1,
             gridViewComboBoxColumn2,
-            gridViewTextBoxColumn3});
+            gridViewTextBoxColumn3,
+            gridViewDecimalColumn3});
             this.radGridView1.MasterTemplate.DataSource = this.employeeBindingSource;
             this.radGridView1.MasterTemplate.EnableFiltering = true;
             this.radGridView1.MasterTemplate.EnablePaging = true;
@@ -483,14 +509,13 @@
             this.positonBindingSource1.DataMember = "positon";
             this.positonBindingSource1.DataSource = this.notarialOfficeCustemersDataSet;
             // 
-            // specializationBindingSource
-            // 
-            this.specializationBindingSource.DataMember = "specialization";
-            this.specializationBindingSource.DataSource = this.notarialOfficeCustemersDataSet;
-            // 
             // specializationTableAdapter
             // 
             this.specializationTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeeTableAdapter1
+            // 
+            this.employeeTableAdapter1.ClearBeforeFill = true;
             // 
             // FormEmployee
             // 
@@ -511,16 +536,17 @@
             this.Load += new System.EventHandler(this.FormEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specializationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).EndInit();
             this.radBindingNavigator1.ResumeLayout(false);
             this.radBindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.specializationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -564,5 +590,7 @@
         private Telerik.WinControls.UI.RadButton radButton2;
         private System.Windows.Forms.BindingSource specializationBindingSource;
         private NotarialOfficeCustemersDataSetTableAdapters.specializationTableAdapter specializationTableAdapter;
+        private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet11;
+        private NotarialOfficeCustemersDataSet1TableAdapters.employeeTableAdapter employeeTableAdapter1;
     }
 }

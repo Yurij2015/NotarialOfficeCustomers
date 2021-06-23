@@ -18,6 +18,10 @@ namespace NotarialOfficeCustomers
 
         private void FormCustomer_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet13.customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter3.Fill(this.notarialOfficeCustemersDataSet13.customer);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.gender' table. You can move, or remove it, as needed.
+            this.genderTableAdapter1.Fill(this.notarialOfficeCustemersDataSet11.gender);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.gender' table. You can move, or remove it, as needed.
             this.genderTableAdapter.Fill(this.notarialOfficeCustemersDataSet2.gender);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.customer' table. You can move, or remove it, as needed.
@@ -49,7 +53,7 @@ namespace NotarialOfficeCustomers
             }
             catch
             {
-                MessageBox.Show("Запись не может быть удалена. Есть связанные записи!");
+                MessageBox.Show("Ошибка обработки данных!");
                 // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.gender' table. You can move, or remove it, as needed.
                 this.genderTableAdapter.Fill(this.notarialOfficeCustemersDataSet2.gender);
                 // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.customer' table. You can move, or remove it, as needed.
