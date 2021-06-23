@@ -157,6 +157,8 @@
     <Compile Include="GuestAddOrder.Designer.cs">
       <DependentUpon>GuestAddOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="RussianRadGridLocalizationProvider.cs" />
+    <Compile Include="RussianDataFilterLocalizationProvider .cs" />
     <EmbeddedResource Include="ElectronicQueueForm.resx">
       <DependentUpon>ElectronicQueueForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +200,7 @@
     <EmbeddedResource Include="GuestAddOrder.resx">
       <DependentUpon>GuestAddOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
     <None Include="NotarialOfficeCustemersDataSet.xsc">
       <DependentUpon>NotarialOfficeCustemersDataSet.xsd</DependentUpon>
     </None>

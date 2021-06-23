@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPosition));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
-            this.positonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
+            this.positonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notarialOfficeCustemersDataSet2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
             this.radBindingNavigator1FirstStrip = new Telerik.WinControls.UI.CommandBarStripElement();
             this.radBindingNavigator1MoveFirstItem = new Telerik.WinControls.UI.CommandBarButton();
@@ -56,12 +56,15 @@
             this.radBindingNavigator1DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.positonTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter();
+            this.positonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.positonTableAdapter2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,15 +80,20 @@
             this.radBindingNavigator1.TabIndex = 2;
             this.radBindingNavigator1.ThemeName = "Fluent";
             // 
-            // positonBindingSource
+            // positonBindingSource1
             // 
-            this.positonBindingSource.DataMember = "positon";
-            this.positonBindingSource.DataSource = this.notarialOfficeCustemersDataSet;
+            this.positonBindingSource1.DataMember = "positon";
+            this.positonBindingSource1.DataSource = this.notarialOfficeCustemersDataSet1BindingSource;
             // 
-            // notarialOfficeCustemersDataSet
+            // notarialOfficeCustemersDataSet1BindingSource
             // 
-            this.notarialOfficeCustemersDataSet.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.notarialOfficeCustemersDataSet1BindingSource.DataSource = this.notarialOfficeCustemersDataSet2;
+            this.notarialOfficeCustemersDataSet1BindingSource.Position = 0;
+            // 
+            // notarialOfficeCustemersDataSet2
+            // 
+            this.notarialOfficeCustemersDataSet2.DataSetName = "NotarialOfficeCustemersDataSet";
+            this.notarialOfficeCustemersDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radBindingNavigator1RowElement
             // 
@@ -289,44 +297,42 @@
             // 
             this.radGridView1.MasterTemplate.AllowSearchRow = true;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "id";
-            gridViewDecimalColumn1.HeaderText = "id";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.IsVisible = false;
-            gridViewDecimalColumn1.Name = "id";
-            gridViewDecimalColumn1.ReadOnly = true;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "positionName";
-            gridViewTextBoxColumn1.HeaderText = "Наименование";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "positionName";
-            gridViewTextBoxColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
-            gridViewTextBoxColumn1.Width = 232;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "desctiption";
-            gridViewTextBoxColumn2.HeaderText = "Описание";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "desctiption";
-            gridViewTextBoxColumn2.Width = 232;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.FieldName = "id";
+            gridViewDecimalColumn2.HeaderText = "id";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "id";
+            gridViewDecimalColumn2.ReadOnly = true;
+            gridViewDecimalColumn2.Width = 155;
+            gridViewTextBoxColumn3.FieldName = "positionName";
+            gridViewTextBoxColumn3.HeaderText = "positionName";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "positionName";
+            gridViewTextBoxColumn3.Width = 155;
+            gridViewTextBoxColumn4.FieldName = "desctiption";
+            gridViewTextBoxColumn4.HeaderText = "desctiption";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "desctiption";
+            gridViewTextBoxColumn4.Width = 155;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2});
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.radGridView1.MasterTemplate.DataSource = this.positonBindingSource;
-            sortDescriptor1.PropertyName = "positionName";
-            this.radGridView1.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor1});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView1.Size = new System.Drawing.Size(484, 389);
             this.radGridView1.TabIndex = 3;
             // 
-            // positonTableAdapter
+            // positonBindingSource
             // 
-            this.positonTableAdapter.ClearBeforeFill = true;
+            this.positonBindingSource.DataMember = "positon";
+            this.positonBindingSource.DataSource = this.notarialOfficeCustemersDataSet2;
+            // 
+            // positonTableAdapter2
+            // 
+            this.positonTableAdapter2.ClearBeforeFill = true;
             // 
             // FormPosition
             // 
@@ -343,10 +349,12 @@
             this.Text = "Список должностей";
             this.Load += new System.EventHandler(this.FormPosition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -375,7 +383,13 @@
         private Telerik.WinControls.UI.CommandBarButton commandBarButton2;
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet;
-        private System.Windows.Forms.BindingSource positonBindingSource;
         private NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter positonTableAdapter;
+        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet1;
+        private NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter positonTableAdapter1;
+        private System.Windows.Forms.BindingSource positonBindingSource1;
+        private System.Windows.Forms.BindingSource notarialOfficeCustemersDataSet1BindingSource;
+        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet2;
+        private System.Windows.Forms.BindingSource positonBindingSource;
+        private NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter positonTableAdapter2;
     }
 }

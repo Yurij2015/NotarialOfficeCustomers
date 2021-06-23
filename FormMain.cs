@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Localization;
 
 namespace NotarialOfficeCustomers
 {
@@ -15,6 +17,8 @@ namespace NotarialOfficeCustomers
         public FormMain()
         {
             InitializeComponent();
+            DataFilterLocalizationProvider.CurrentProvider = new RussianDataFilterLocalizationProvider();
+            RadGridLocalizationProvider.CurrentProvider = new RussianRadGridLocalizationProvider();
         }
 
         private void Form1_Load(object sender, EventArgs e)

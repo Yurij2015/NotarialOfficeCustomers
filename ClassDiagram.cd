@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NotarialOfficeCustomers.ElectronicQueueForm" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QGAEAAAAAiAQCAAAMACAggACEAEAAAACAAAACAAAAAg=</HashCode>
+      <FileName>ElectronicQueueForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.FormCustomer" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IDAAAAAAEigUCAAAEASAAIACQAAAgUAgAEAYSAAQAKA=</HashCode>
+      <FileName>FormCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.FormEmployee" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QhAACAFAACgQCABAg4GACgCCUAAFBQABIAJEAAAFgEA=</HashCode>
+      <FileName>FormEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.FormMain" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAgAACAAAAAFAACAgAADAAAAAAAAAAQAAABAALA=</HashCode>
+      <FileName>FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.FormPosition" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAECAEAACgQCAAAAYGACgCCEAAEBQAAIAJAAAAFgAA=</HashCode>
+      <FileName>FormPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.FormService" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQCAAAAACAggACAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>FormService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.GuestAddOrder" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACBAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GuestAddOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.LoginForm" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAACAACAAAIAEAICAAAECAAAAAAACAAAAAAEAAJA=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.PanelForm" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAPgFAACAAAACAAAAAAAIAAAAAAAAAL0=</HashCode>
+      <FileName>PanelForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.PanelFormNoAdmin" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAPgFAACAAAACAAAAAAAAAAAAAAAAAL0=</HashCode>
+      <FileName>PanelFormNoAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.Program" Collapsed="true">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.Properties.Resources" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAgAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.Properties.Settings" Collapsed="true">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSet" Collapsed="true">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCCBEwAUECpBJECMwQYAAAgKwjlACEAAAIUABRA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.employeeTableAdapter" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.positonTableAdapter" Collapsed="true">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.recordingTableAdapter" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.userTableAdapter" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.serviceTableAdapter" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gwAAACIBCABgBAEBAAAEMAAiAACKgACBAAQICQAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

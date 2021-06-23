@@ -26,7 +26,6 @@ namespace NotarialOfficeCustomers
 
         private void commandBarButton2_Click(object sender, EventArgs e)
         {
-            serviceTableAdapter.Update(notarialOfficeCustemersDataSet.service);
         }
     }
 }

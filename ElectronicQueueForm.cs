@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Localization;
 
 namespace NotarialOfficeCustomers
 {
@@ -14,19 +16,25 @@ namespace NotarialOfficeCustomers
         public ElectronicQueueForm()
         {
             InitializeComponent();
+            DataFilterLocalizationProvider.CurrentProvider = new RussianDataFilterLocalizationProvider();
+            RadGridLocalizationProvider.CurrentProvider = new RussianRadGridLocalizationProvider();
+
+
         }
 
         private void ElectronicQueueForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.service' table. You can move, or remove it, as needed.
-            this.serviceTableAdapter.Fill(this.notarialOfficeCustemersDataSet.service);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet1.recording' table. You can move, or remove it, as needed.
-            this.recordingTableAdapter.Fill(this.notarialOfficeCustemersDataSet1.recording);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.recording' table. You can move, or remove it, as needed.
-            this.recordingTableAdapter.Fill(this.notarialOfficeCustemersDataSet.recording);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.recording' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSetQueue.employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSetQueue.employee);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSetQueue.timetorecording' table. You can move, or remove it, as needed.
+            this.timetorecordingTableAdapter.Fill(this.notarialOfficeCustemersDataSetQueue.timetorecording);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSetQueue.service' table. You can move, or remove it, as needed.
+            this.serviceTableAdapter1.Fill(this.notarialOfficeCustemersDataSetQueue.service);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSetQueue.customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter1.Fill(this.notarialOfficeCustemersDataSetQueue.customer);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet4.recording' table. You can move, or remove it, as needed.
+            this.recordingTableAdapterQueue.Fill(this.notarialOfficeCustemersDataSetQueue.recording);
+
 
         }
 
@@ -47,7 +55,6 @@ namespace NotarialOfficeCustomers
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            recordingTableAdapter.Update(notarialOfficeCustemersDataSet.recording);
         }
 
         private void radGridView1_Click(object sender, EventArgs e)
@@ -62,11 +69,20 @@ namespace NotarialOfficeCustomers
 
         private void commandBarButton2_Click(object sender, EventArgs e)
         {
-            recordingTableAdapter.Update(notarialOfficeCustemersDataSet.recording);
         }
 
         private void recordingBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void radBindingNavigator1AddNewItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            recordingTableAdapterQueue.Update(notarialOfficeCustemersDataSetQueue.recording);
 
         }
     }

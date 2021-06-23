@@ -18,8 +18,8 @@ namespace NotarialOfficeCustomers
 
         private void FormPosition_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.positon' table. You can move, or remove it, as needed.
-            this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.positon' table. You can move, or remove it, as needed.
+            this.positonTableAdapter2.Fill(this.notarialOfficeCustemersDataSet2.positon);
 
         }
 

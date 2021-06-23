@@ -29,137 +29,253 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomer));
-            this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter();
+            this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
+            this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
+            this.radBindingNavigator1FirstStrip = new Telerik.WinControls.UI.CommandBarStripElement();
+            this.radBindingNavigator1MoveFirstItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1MovePreviousItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1PositionItem = new Telerik.WinControls.UI.CommandBarTextBox();
+            this.radBindingNavigator1CountItem = new Telerik.WinControls.UI.CommandBarLabel();
+            this.commandBarSeparator3 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1MoveNextItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarSeparator4 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1MoveLastItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.radBindingNavigator1SecondStrip = new Telerik.WinControls.UI.CommandBarStripElement();
+            this.radBindingNavigator1AddNewItem = new Telerik.WinControls.UI.CommandBarButton();
+            this.commandBarSeparator5 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radBindingNavigator1DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
-            this.radBindingNavigator2 = new Telerik.WinControls.UI.RadBindingNavigator();
-            this.commandBarRowElement2 = new Telerik.WinControls.UI.CommandBarRowElement();
-            this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
-            this.commandBarSeparator6 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarSeparator7 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarTextBox1 = new Telerik.WinControls.UI.CommandBarTextBox();
-            this.commandBarLabel1 = new Telerik.WinControls.UI.CommandBarLabel();
-            this.commandBarSeparator8 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarSeparator9 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarStripElement2 = new Telerik.WinControls.UI.CommandBarStripElement();
-            this.commandBarSeparator10 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton3 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton4 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton5 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton6 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton7 = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarButton8 = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).BeginInit();
+            this.notarialOfficeCustemersDataSet2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
+            this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator2)).BeginInit();
+            this.radGridView1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
-            // 
-            // notarialOfficeCustemersDataSet
-            // 
-            this.notarialOfficeCustemersDataSet.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radGridView1
             // 
             this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.radGridView1.Controls.Add(this.radBindingNavigator1);
             this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView1.ForeColor = System.Drawing.Color.Black;
             this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(0, 36);
+            this.radGridView1.Location = new System.Drawing.Point(-1, 1);
             // 
             // 
             // 
             this.radGridView1.MasterTemplate.AllowSearchRow = true;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.FieldName = "id";
+            gridViewDecimalColumn1.HeaderText = "id";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "id";
+            gridViewDecimalColumn1.ReadOnly = true;
+            gridViewDecimalColumn1.Width = 141;
+            gridViewTextBoxColumn1.FieldName = "fullName";
+            gridViewTextBoxColumn1.HeaderText = "fullName";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "fullName";
+            gridViewTextBoxColumn1.Width = 141;
             gridViewDecimalColumn2.DataType = typeof(int);
-            gridViewDecimalColumn2.EnableExpressionEditor = false;
-            gridViewDecimalColumn2.FieldName = "id";
-            gridViewDecimalColumn2.HeaderText = "Номер";
+            gridViewDecimalColumn2.FieldName = "phone";
+            gridViewDecimalColumn2.HeaderText = "phone";
             gridViewDecimalColumn2.IsAutoGenerated = true;
-            gridViewDecimalColumn2.Name = "id";
-            gridViewDecimalColumn2.ReadOnly = true;
-            gridViewDecimalColumn2.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
-            gridViewDecimalColumn2.Width = 77;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "fullName";
-            gridViewTextBoxColumn7.HeaderText = "ФИО клиента";
-            gridViewTextBoxColumn7.IsAutoGenerated = true;
-            gridViewTextBoxColumn7.Name = "fullName";
-            gridViewTextBoxColumn7.Width = 235;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "phone";
-            gridViewTextBoxColumn8.HeaderText = "Номер телефона";
-            gridViewTextBoxColumn8.IsAutoGenerated = true;
-            gridViewTextBoxColumn8.Name = "phone";
-            gridViewTextBoxColumn8.Width = 171;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "adress";
-            gridViewTextBoxColumn9.HeaderText = "Адрес";
-            gridViewTextBoxColumn9.IsAutoGenerated = true;
-            gridViewTextBoxColumn9.Name = "adress";
-            gridViewTextBoxColumn9.Width = 171;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "gender";
-            gridViewTextBoxColumn10.HeaderText = "Пол";
-            gridViewTextBoxColumn10.IsAutoGenerated = true;
-            gridViewTextBoxColumn10.Name = "gender";
-            gridViewTextBoxColumn10.Width = 87;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "passport";
-            gridViewTextBoxColumn11.HeaderText = "Паспорт";
-            gridViewTextBoxColumn11.IsAutoGenerated = true;
-            gridViewTextBoxColumn11.Name = "passport";
-            gridViewTextBoxColumn11.Width = 92;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "email";
-            gridViewTextBoxColumn12.HeaderText = "Email";
-            gridViewTextBoxColumn12.IsAutoGenerated = true;
-            gridViewTextBoxColumn12.Name = "email";
-            gridViewTextBoxColumn12.Width = 153;
+            gridViewDecimalColumn2.Name = "phone";
+            gridViewDecimalColumn2.Width = 141;
+            gridViewTextBoxColumn2.FieldName = "adress";
+            gridViewTextBoxColumn2.HeaderText = "adress";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "adress";
+            gridViewTextBoxColumn2.Width = 141;
+            gridViewDecimalColumn3.DataType = typeof(int);
+            gridViewDecimalColumn3.FieldName = "gender";
+            gridViewDecimalColumn3.HeaderText = "gender";
+            gridViewDecimalColumn3.IsAutoGenerated = true;
+            gridViewDecimalColumn3.Name = "gender";
+            gridViewDecimalColumn3.Width = 141;
+            gridViewTextBoxColumn3.FieldName = "passport";
+            gridViewTextBoxColumn3.HeaderText = "passport";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "passport";
+            gridViewTextBoxColumn3.Width = 141;
+            gridViewTextBoxColumn4.FieldName = "email";
+            gridViewTextBoxColumn4.HeaderText = "email";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "email";
+            gridViewTextBoxColumn4.Width = 140;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
             gridViewDecimalColumn2,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12});
-            this.radGridView1.MasterTemplate.DataSource = this.customerBindingSource;
-            sortDescriptor2.PropertyName = "id";
-            this.radGridView1.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            gridViewTextBoxColumn2,
+            gridViewDecimalColumn3,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
+            this.radGridView1.MasterTemplate.DataSource = this.customerBindingSource2;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView1.Size = new System.Drawing.Size(1001, 359);
             this.radGridView1.TabIndex = 0;
             // 
-            // customerBindingSource
+            // radBindingNavigator1
             // 
-            this.customerBindingSource.DataMember = "customer";
-            this.customerBindingSource.DataSource = this.notarialOfficeCustemersDataSet;
+            this.radBindingNavigator1.BindingSource = this.customerBindingSource2;
+            this.radBindingNavigator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radBindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.radBindingNavigator1.Name = "radBindingNavigator1";
+            this.radBindingNavigator1.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
+            this.radBindingNavigator1RowElement});
+            this.radBindingNavigator1.Size = new System.Drawing.Size(1001, 30);
+            this.radBindingNavigator1.TabIndex = 2;
             // 
-            // customerTableAdapter
+            // radBindingNavigator1RowElement
             // 
-            this.customerTableAdapter.ClearBeforeFill = true;
+            this.radBindingNavigator1RowElement.MinSize = new System.Drawing.Size(25, 25);
+            this.radBindingNavigator1RowElement.Name = "radBindingNavigator1RowElement";
+            this.radBindingNavigator1RowElement.Strips.AddRange(new Telerik.WinControls.UI.CommandBarStripElement[] {
+            this.radBindingNavigator1FirstStrip,
+            this.radBindingNavigator1SecondStrip});
+            // 
+            // radBindingNavigator1FirstStrip
+            // 
+            this.radBindingNavigator1FirstStrip.DisplayName = "radBindingNavigator1FirstStrip";
+            this.radBindingNavigator1FirstStrip.EnableDragging = false;
+            // 
+            // 
+            // 
+            this.radBindingNavigator1FirstStrip.Grip.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            this.radBindingNavigator1FirstStrip.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
+            this.radBindingNavigator1MoveFirstItem,
+            this.commandBarSeparator1,
+            this.radBindingNavigator1MovePreviousItem,
+            this.commandBarSeparator2,
+            this.radBindingNavigator1PositionItem,
+            this.radBindingNavigator1CountItem,
+            this.commandBarSeparator3,
+            this.radBindingNavigator1MoveNextItem,
+            this.commandBarSeparator4,
+            this.radBindingNavigator1MoveLastItem});
+            this.radBindingNavigator1FirstStrip.MinSize = new System.Drawing.Size(0, 0);
+            // 
+            // 
+            // 
+            this.radBindingNavigator1FirstStrip.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.radBindingNavigator1FirstStrip.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.radBindingNavigator1FirstStrip.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // radBindingNavigator1MoveFirstItem
+            // 
+            this.radBindingNavigator1MoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveFirstItem.Image")));
+            this.radBindingNavigator1MoveFirstItem.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.radBindingNavigator1MoveFirstItem.Name = "radBindingNavigator1MoveFirstItem";
+            this.radBindingNavigator1MoveFirstItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveFirstItem.SvgImageXml");
+            // 
+            // commandBarSeparator1
+            // 
+            this.commandBarSeparator1.Name = "commandBarSeparator1";
+            this.commandBarSeparator1.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1MovePreviousItem
+            // 
+            this.radBindingNavigator1MovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MovePreviousItem.Image")));
+            this.radBindingNavigator1MovePreviousItem.Name = "radBindingNavigator1MovePreviousItem";
+            this.radBindingNavigator1MovePreviousItem.SvgImageXml = resources.GetString("radBindingNavigator1MovePreviousItem.SvgImageXml");
+            // 
+            // commandBarSeparator2
+            // 
+            this.commandBarSeparator2.Name = "commandBarSeparator2";
+            this.commandBarSeparator2.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1PositionItem
+            // 
+            this.radBindingNavigator1PositionItem.Name = "radBindingNavigator1PositionItem";
+            this.radBindingNavigator1PositionItem.Text = "0";
+            // 
+            // radBindingNavigator1CountItem
+            // 
+            this.radBindingNavigator1CountItem.Name = "radBindingNavigator1CountItem";
+            this.radBindingNavigator1CountItem.Text = "of 0";
+            // 
+            // commandBarSeparator3
+            // 
+            this.commandBarSeparator3.Name = "commandBarSeparator3";
+            this.commandBarSeparator3.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1MoveNextItem
+            // 
+            this.radBindingNavigator1MoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveNextItem.Image")));
+            this.radBindingNavigator1MoveNextItem.Name = "radBindingNavigator1MoveNextItem";
+            this.radBindingNavigator1MoveNextItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveNextItem.SvgImageXml");
+            // 
+            // commandBarSeparator4
+            // 
+            this.commandBarSeparator4.Name = "commandBarSeparator4";
+            this.commandBarSeparator4.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1MoveLastItem
+            // 
+            this.radBindingNavigator1MoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1MoveLastItem.Image")));
+            this.radBindingNavigator1MoveLastItem.Name = "radBindingNavigator1MoveLastItem";
+            this.radBindingNavigator1MoveLastItem.SvgImageXml = resources.GetString("radBindingNavigator1MoveLastItem.SvgImageXml");
+            // 
+            // radBindingNavigator1SecondStrip
+            // 
+            this.radBindingNavigator1SecondStrip.DisplayName = "radBindingNavigator1SecondStrip";
+            this.radBindingNavigator1SecondStrip.EnableDragging = false;
+            // 
+            // 
+            // 
+            this.radBindingNavigator1SecondStrip.Grip.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            this.radBindingNavigator1SecondStrip.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
+            this.radBindingNavigator1AddNewItem,
+            this.commandBarSeparator5,
+            this.radBindingNavigator1DeleteItem});
+            this.radBindingNavigator1SecondStrip.MinSize = new System.Drawing.Size(0, 0);
+            // 
+            // 
+            // 
+            this.radBindingNavigator1SecondStrip.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.radBindingNavigator1SecondStrip.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.radBindingNavigator1SecondStrip.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // radBindingNavigator1AddNewItem
+            // 
+            this.radBindingNavigator1AddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1AddNewItem.Image")));
+            this.radBindingNavigator1AddNewItem.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.radBindingNavigator1AddNewItem.Name = "radBindingNavigator1AddNewItem";
+            this.radBindingNavigator1AddNewItem.SvgImageXml = resources.GetString("radBindingNavigator1AddNewItem.SvgImageXml");
+            // 
+            // commandBarSeparator5
+            // 
+            this.commandBarSeparator5.Name = "commandBarSeparator5";
+            this.commandBarSeparator5.VisibleInOverflowMenu = false;
+            // 
+            // radBindingNavigator1DeleteItem
+            // 
+            this.radBindingNavigator1DeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1DeleteItem.Image")));
+            this.radBindingNavigator1DeleteItem.Name = "radBindingNavigator1DeleteItem";
+            this.radBindingNavigator1DeleteItem.SvgImageXml = resources.GetString("radBindingNavigator1DeleteItem.SvgImageXml");
             // 
             // commandBarRowElement1
             // 
@@ -171,208 +287,6 @@
             this.commandBarRowElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarRowElement1.UseCompatibleTextRendering = false;
             // 
-            // radBindingNavigator2
-            // 
-            this.radBindingNavigator2.BindingSource = this.customerBindingSource;
-            this.radBindingNavigator2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radBindingNavigator2.Location = new System.Drawing.Point(0, 0);
-            this.radBindingNavigator2.Name = "radBindingNavigator2";
-            this.radBindingNavigator2.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
-            this.commandBarRowElement2});
-            this.radBindingNavigator2.Size = new System.Drawing.Size(1001, 30);
-            this.radBindingNavigator2.TabIndex = 2;
-            this.radBindingNavigator2.ThemeName = "Fluent";
-            this.radBindingNavigator2.Click += new System.EventHandler(this.radBindingNavigator2_Click);
-            // 
-            // commandBarRowElement2
-            // 
-            this.commandBarRowElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarRowElement2.MinSize = new System.Drawing.Size(25, 25);
-            this.commandBarRowElement2.Name = "radBindingNavigator1RowElement";
-            this.commandBarRowElement2.Strips.AddRange(new Telerik.WinControls.UI.CommandBarStripElement[] {
-            this.commandBarStripElement1,
-            this.commandBarStripElement2});
-            this.commandBarRowElement2.Text = "";
-            this.commandBarRowElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarRowElement2.UseCompatibleTextRendering = false;
-            // 
-            // commandBarStripElement1
-            // 
-            this.commandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement1.DisplayName = "radBindingNavigator1FirstStrip";
-            this.commandBarStripElement1.EnableDragging = false;
-            // 
-            // 
-            // 
-            this.commandBarStripElement1.Grip.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            this.commandBarStripElement1.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
-            this.commandBarButton1,
-            this.commandBarSeparator6,
-            this.commandBarButton3,
-            this.commandBarSeparator7,
-            this.commandBarTextBox1,
-            this.commandBarLabel1,
-            this.commandBarSeparator8,
-            this.commandBarButton4,
-            this.commandBarSeparator9,
-            this.commandBarButton5});
-            this.commandBarStripElement1.MinSize = new System.Drawing.Size(0, 0);
-            // 
-            // 
-            // 
-            this.commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            this.commandBarStripElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement1.UseCompatibleTextRendering = false;
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            // 
-            // commandBarSeparator6
-            // 
-            this.commandBarSeparator6.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator6.Name = "commandBarSeparator6";
-            this.commandBarSeparator6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator6.UseCompatibleTextRendering = false;
-            this.commandBarSeparator6.VisibleInOverflowMenu = false;
-            // 
-            // commandBarSeparator7
-            // 
-            this.commandBarSeparator7.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator7.Name = "commandBarSeparator7";
-            this.commandBarSeparator7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator7.UseCompatibleTextRendering = false;
-            this.commandBarSeparator7.VisibleInOverflowMenu = false;
-            // 
-            // commandBarTextBox1
-            // 
-            this.commandBarTextBox1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarTextBox1.Name = "commandBarTextBox1";
-            this.commandBarTextBox1.Text = "0";
-            this.commandBarTextBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarTextBox1.UseCompatibleTextRendering = false;
-            // 
-            // commandBarLabel1
-            // 
-            this.commandBarLabel1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarLabel1.Name = "commandBarLabel1";
-            this.commandBarLabel1.Text = "of 0";
-            this.commandBarLabel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarLabel1.UseCompatibleTextRendering = false;
-            // 
-            // commandBarSeparator8
-            // 
-            this.commandBarSeparator8.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator8.Name = "commandBarSeparator8";
-            this.commandBarSeparator8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator8.UseCompatibleTextRendering = false;
-            this.commandBarSeparator8.VisibleInOverflowMenu = false;
-            // 
-            // commandBarSeparator9
-            // 
-            this.commandBarSeparator9.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator9.Name = "commandBarSeparator9";
-            this.commandBarSeparator9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator9.UseCompatibleTextRendering = false;
-            this.commandBarSeparator9.VisibleInOverflowMenu = false;
-            // 
-            // commandBarStripElement2
-            // 
-            this.commandBarStripElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement2.DisplayName = "radBindingNavigator1SecondStrip";
-            this.commandBarStripElement2.EnableDragging = false;
-            // 
-            // 
-            // 
-            this.commandBarStripElement2.Grip.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            this.commandBarStripElement2.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
-            this.commandBarButton6,
-            this.commandBarSeparator10,
-            this.commandBarButton7,
-            this.commandBarButton8});
-            this.commandBarStripElement2.MinSize = new System.Drawing.Size(0, 0);
-            // 
-            // 
-            // 
-            this.commandBarStripElement2.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            this.commandBarStripElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement2.UseCompatibleTextRendering = false;
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            // 
-            // commandBarSeparator10
-            // 
-            this.commandBarSeparator10.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator10.Name = "commandBarSeparator10";
-            this.commandBarSeparator10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarSeparator10.UseCompatibleTextRendering = false;
-            this.commandBarSeparator10.VisibleInOverflowMenu = false;
-            // 
-            // commandBarButton1
-            // 
-            this.commandBarButton1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
-            this.commandBarButton1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.commandBarButton1.Name = "commandBarButton1";
-            this.commandBarButton1.SvgImageXml = resources.GetString("commandBarButton1.SvgImageXml");
-            this.commandBarButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton1.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton3
-            // 
-            this.commandBarButton3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton3.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton3.Image")));
-            this.commandBarButton3.Name = "commandBarButton3";
-            this.commandBarButton3.SvgImageXml = resources.GetString("commandBarButton3.SvgImageXml");
-            this.commandBarButton3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton3.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton4
-            // 
-            this.commandBarButton4.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton4.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton4.Image")));
-            this.commandBarButton4.Name = "commandBarButton4";
-            this.commandBarButton4.SvgImageXml = resources.GetString("commandBarButton4.SvgImageXml");
-            this.commandBarButton4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton4.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton5
-            // 
-            this.commandBarButton5.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton5.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton5.Image")));
-            this.commandBarButton5.Name = "commandBarButton5";
-            this.commandBarButton5.SvgImageXml = resources.GetString("commandBarButton5.SvgImageXml");
-            this.commandBarButton5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton5.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton6
-            // 
-            this.commandBarButton6.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton6.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton6.Image")));
-            this.commandBarButton6.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.commandBarButton6.Name = "commandBarButton6";
-            this.commandBarButton6.SvgImageXml = resources.GetString("commandBarButton6.SvgImageXml");
-            this.commandBarButton6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton6.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton7
-            // 
-            this.commandBarButton7.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton7.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton7.Image")));
-            this.commandBarButton7.Name = "commandBarButton7";
-            this.commandBarButton7.SvgImageXml = resources.GetString("commandBarButton7.SvgImageXml");
-            this.commandBarButton7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton7.UseCompatibleTextRendering = false;
-            // 
-            // commandBarButton8
-            // 
-            this.commandBarButton8.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton8.DisplayName = "commandBarButton2";
-            this.commandBarButton8.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton8.Image")));
-            this.commandBarButton8.Name = "commandBarButton8";
-            this.commandBarButton8.Text = "Сохранить";
-            this.commandBarButton8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarButton8.UseCompatibleTextRendering = false;
-            this.commandBarButton8.Click += new System.EventHandler(this.commandBarButton8_Click);
-            // 
             // commandBarButton2
             // 
             this.commandBarButton2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -383,12 +297,25 @@
             this.commandBarButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarButton2.UseCompatibleTextRendering = false;
             // 
+            // notarialOfficeCustemersDataSet2
+            // 
+            this.notarialOfficeCustemersDataSet2.DataSetName = "NotarialOfficeCustemersDataSet";
+            this.notarialOfficeCustemersDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource2
+            // 
+            this.customerBindingSource2.DataMember = "customer";
+            this.customerBindingSource2.DataSource = this.notarialOfficeCustemersDataSet2;
+            // 
+            // customerTableAdapter2
+            // 
+            this.customerTableAdapter2.ClearBeforeFill = true;
+            // 
             // FormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 397);
-            this.Controls.Add(this.radBindingNavigator2);
+            this.ClientSize = new System.Drawing.Size(1001, 361);
             this.Controls.Add(this.radGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCustomer";
@@ -398,41 +325,45 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Клиенты нотариальной конторы";
             this.Load += new System.EventHandler(this.FormCustomer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator2)).EndInit();
+            this.radGridView1.ResumeLayout(false);
+            this.radGridView1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet;
         private Telerik.WinControls.UI.RadGridView radGridView1;
-        private System.Windows.Forms.BindingSource customerBindingSource;
         private NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter customerTableAdapter;
         private Telerik.WinControls.UI.CommandBarButton commandBarButton2;
         private Telerik.WinControls.UI.CommandBarRowElement commandBarRowElement1;
-        private Telerik.WinControls.UI.RadBindingNavigator radBindingNavigator2;
-        private Telerik.WinControls.UI.CommandBarRowElement commandBarRowElement2;
-        private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement1;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton1;
-        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator6;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton3;
-        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator7;
-        private Telerik.WinControls.UI.CommandBarTextBox commandBarTextBox1;
-        private Telerik.WinControls.UI.CommandBarLabel commandBarLabel1;
-        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator8;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton4;
-        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator9;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton5;
-        private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement2;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton6;
-        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator10;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton7;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton8;
+        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet1;
+        private NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter customerTableAdapter1;
+        private Telerik.WinControls.UI.RadBindingNavigator radBindingNavigator1;
+        private Telerik.WinControls.UI.CommandBarRowElement radBindingNavigator1RowElement;
+        private Telerik.WinControls.UI.CommandBarStripElement radBindingNavigator1FirstStrip;
+        private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1MoveFirstItem;
+        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
+        private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1MovePreviousItem;
+        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator2;
+        private Telerik.WinControls.UI.CommandBarTextBox radBindingNavigator1PositionItem;
+        private Telerik.WinControls.UI.CommandBarLabel radBindingNavigator1CountItem;
+        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator3;
+        private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1MoveNextItem;
+        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator4;
+        private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1MoveLastItem;
+        private Telerik.WinControls.UI.CommandBarStripElement radBindingNavigator1SecondStrip;
+        private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1AddNewItem;
+        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator5;
+        private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1DeleteItem;
+        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet2;
+        private System.Windows.Forms.BindingSource customerBindingSource2;
+        private NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter customerTableAdapter2;
     }
 }

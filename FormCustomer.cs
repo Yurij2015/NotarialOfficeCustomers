@@ -18,14 +18,14 @@ namespace NotarialOfficeCustomers
 
         private void FormCustomer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.notarialOfficeCustemersDataSet.customer);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter2.Fill(this.notarialOfficeCustemersDataSet2.customer);
 
         }
 
         private void commandBarButton8_Click(object sender, EventArgs e)
         {
-            customerTableAdapter.Update(notarialOfficeCustemersDataSet.customer);
+            customerTableAdapter1.Update(notarialOfficeCustemersDataSet1.customer);
         }
 
         private void radBindingNavigator2_Click(object sender, EventArgs e)
