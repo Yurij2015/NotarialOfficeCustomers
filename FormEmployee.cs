@@ -18,20 +18,29 @@ namespace NotarialOfficeCustomers
 
         private void commandBarButton2_Click(object sender, EventArgs e)
         {
-            employeeTableAdapter.Update(notarialOfficeCustemersDataSet.employee);
+            try
+            {
+                employeeTableAdapter.Update(notarialOfficeCustemersDataSet11.employee);
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка обработки данных!");
+                this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.specialization);
+                this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.positon);
+                this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.employee);
 
+            }
         }
 
         private void FormEmployee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.specialization' table. You can move, or remove it, as needed.
+            this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.specialization);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.positon' table. You can move, or remove it, as needed.
+            this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.positon);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter1.Fill(this.notarialOfficeCustemersDataSet11.employee);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.specialization' table. You can move, or remove it, as needed.
-            this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet.specialization);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.positon' table. You can move, or remove it, as needed.
-            this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet.employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
+            this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.employee);
+
 
         }
 
@@ -44,16 +53,22 @@ namespace NotarialOfficeCustomers
         {
             try
             {
-                employeeTableAdapter.Update(notarialOfficeCustemersDataSet.employee);
+                employeeTableAdapter.Update(notarialOfficeCustemersDataSet11.employee);
             }
             catch
             {
-                MessageBox.Show("Ошибка обработки данных!");
-                this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet.specialization);
-                this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet.positon);
-                this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet.employee);
+                MessageBox.Show("Запись не может быть удалена! Есть связанные записи!");
+
+                this.specializationTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.specialization);
+                this.positonTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.positon);
+                this.employeeTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.employee);
 
             }
+        }
+
+        private void radBindingNavigator1DeleteItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

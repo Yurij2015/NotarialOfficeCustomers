@@ -41,6 +41,7 @@ namespace NotarialOfficeCustomers
             this.notarialOfficeCustemersDataSet = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.serviceTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.serviceTableAdapter();
             this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
             this.radBindingNavigator1FirstStrip = new Telerik.WinControls.UI.CommandBarStripElement();
             this.radBindingNavigator1MoveFirstItem = new Telerik.WinControls.UI.CommandBarButton();
@@ -57,7 +58,6 @@ namespace NotarialOfficeCustomers
             this.radBindingNavigator1AddNewItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarSeparator5 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.radBindingNavigator1DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
@@ -71,11 +71,11 @@ namespace NotarialOfficeCustomers
             // 
             this.radGridView1.BackColor = System.Drawing.SystemColors.Control;
             this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(0, 31);
+            this.radGridView1.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
@@ -123,7 +123,7 @@ namespace NotarialOfficeCustomers
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radGridView1.Size = new System.Drawing.Size(1027, 424);
+            this.radGridView1.Size = new System.Drawing.Size(1027, 455);
             this.radGridView1.TabIndex = 0;
             this.radGridView1.ThemeName = "Fluent";
             // 
@@ -153,6 +153,16 @@ namespace NotarialOfficeCustomers
             this.radBindingNavigator1.Size = new System.Drawing.Size(1027, 30);
             this.radBindingNavigator1.TabIndex = 1;
             this.radBindingNavigator1.ThemeName = "Fluent";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Location = new System.Drawing.Point(266, 1);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(72, 26);
+            this.radButton2.TabIndex = 3;
+            this.radButton2.Text = "Сохранить";
+            this.radButton2.ThemeName = "Fluent";
+            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
             // 
             // radBindingNavigator1RowElement
             // 
@@ -281,16 +291,6 @@ namespace NotarialOfficeCustomers
             this.radBindingNavigator1DeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("radBindingNavigator1DeleteItem.Image")));
             this.radBindingNavigator1DeleteItem.Name = "radBindingNavigator1DeleteItem";
             this.radBindingNavigator1DeleteItem.SvgImageXml = resources.GetString("radBindingNavigator1DeleteItem.SvgImageXml");
-            // 
-            // radButton2
-            // 
-            this.radButton2.Location = new System.Drawing.Point(266, 1);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(72, 26);
-            this.radButton2.TabIndex = 3;
-            this.radButton2.Text = "Сохранить";
-            this.radButton2.ThemeName = "Fluent";
-            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
             // 
             // FormService
             // 

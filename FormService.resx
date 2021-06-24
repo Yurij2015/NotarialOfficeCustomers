@@ -129,10 +129,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="radBindingNavigator1MoveFirstItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABdSURBVDhPYxgFmMDY2Pg/lAkHWlpaPAYGBmehXPwA3QAj
-        I6M0oNgPbAZjBTCFMFtBfBgGKyAEQAqRbUXGUCX4AUgh0IBsIE2+ASCaIi9AmWBAdiAiA5KiccQBBgYA
-        7484FowdX30AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAF1JREFUOE9jGAWYwNjY+D+UCQdaWlo8BgYGZ6Fc/ADdACMjozSg2A9sBmMFMIUw
+        W0F8GAYrIARACpFtRcZQJfgBSCHQgGwgTb4BIJoiL0CZYEB2ICIDkqJxxAEGBgDvjzgWjB1ffQAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="radBindingNavigator1MoveFirstItem.SvgImageXml" xml:space="preserve">
@@ -148,9 +148,9 @@
   </data>
   <data name="radBindingNavigator1MovePreviousItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABJSURBVDhPYxgFxAEtLS0eAwODs1AuacDIyCjN2Nj4BxD/
-        hwoRB2C2gjTCMFSKMEC2lVwDsikyAAQo8gIyIDsQkQFF0TjsAQMDAF8ZK1YmHQKBAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAElJREFUOE9jGAXEAS0tLR4DA4OzUC5pwMjIKM3Y2PgHEP+HChEHYLaCNMIwVIow
+        QLaVXAOyKTIABCjyAjIgOxCRAUXROOwBAwMAXxkrViYdAoEAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="radBindingNavigator1MovePreviousItem.SvgImageXml" xml:space="preserve">
@@ -166,9 +166,9 @@
   </data>
   <data name="radBindingNavigator1MoveNextItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABISURBVDhPYxgF2IGBgcFZLS0tHiiXdGBsbPwfiH8YGRml
-        QYVIA1ADwJgs1yAbAMWkuQaHAdlQacIAWTMlXiA/ECmOxhEFGBgAg2QrVi/lCNwAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAEhJREFUOE9jGAXYgYGBwVktLS0eKJd0YGxs/B+IfxgZGaVBhUgDUAPAmCzXIBsA
+        xaS5BocB2VBpwgBZMyVeID8QKY7GEQUYGACDZCtWL+UI3AAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="radBindingNavigator1MoveNextItem.SvgImageXml" xml:space="preserve">
@@ -184,10 +184,9 @@
   </data>
   <data name="radBindingNavigator1MoveLastItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVDhPYxgFmMDAwOCslpYWD5QLB8bGxv+hTPwApBCI
-        fxgZGaVBhcCAVAPAGNk1ZBkAxWDXgNhQJfgBmmaYAdkgNlQJfoCsmRIvkB+IFEfjiAMMDACPLjgW/6Qf
-        ZgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFZJREFUOE9jGAWYwMDA4KyWlhYPlAsHxsbG/6FM/ACkEIh/GBkZpUGFwIBUA8AY
+        2TVkGQDFYNeA2FAl+AGaZpgB2SA2VAl+gKyZEi+QH4gUR+OIAwwMAI8uOBb/pB9mAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="radBindingNavigator1MoveLastItem.SvgImageXml" xml:space="preserve">
@@ -203,9 +202,9 @@
   </data>
   <data name="radBindingNavigator1AddNewItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAxSURBVDhPYxjmwNjY+D8IQ7mkgyFoAEwDIQxVjgmwKcaG
-        ocoJA5I1oINhYMBQAAwMAGrUOWGZ0bJBAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAADFJREFUOE9jGObA2Nj4PwhDuaSDIWgATAMhDFWOCbApxoahygkDkjWgg2FgwFAA
+        DAwAatQ5YZnRskEAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="radBindingNavigator1AddNewItem.SvgImageXml" xml:space="preserve">
@@ -221,10 +220,9 @@
   </data>
   <data name="radBindingNavigator1DeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPY6AJMDAwuGtsbPwfhkF8qBRxAKQJygQDdD5W
-        gGwjIQzVggqwKcSFoVowAUySEI0TjBowrAzABQgagJ6J0DHJmYowYGAAADgnftWJAEHHAAAAAElFTkSu
-        QmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAExJREFUOE9joAkwMDC4a2xs/B+GQXyoFHEApAnKBAN0PlaAbCMhDNWCCrApxIWh
+        WjABTJIQjROMGjCsDMAFCBqAnonQMcmZijBgYAAAOCd+1YkAQccAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="radBindingNavigator1DeleteItem.SvgImageXml" xml:space="preserve">

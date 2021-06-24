@@ -18,14 +18,12 @@ namespace NotarialOfficeCustomers
 
         private void FormCustomer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet13.customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter3.Fill(this.notarialOfficeCustemersDataSet13.customer);
             // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.gender' table. You can move, or remove it, as needed.
-            this.genderTableAdapter1.Fill(this.notarialOfficeCustemersDataSet11.gender);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.gender' table. You can move, or remove it, as needed.
-            this.genderTableAdapter.Fill(this.notarialOfficeCustemersDataSet2.gender);
-            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter2.Fill(this.notarialOfficeCustemersDataSet2.customer);
+            this.genderTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.gender);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter2.Fill(this.notarialOfficeCustemersDataSet11.customer);
+            // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet11.customer' table. You can move, or remove it, as needed.
+
 
         }
 
@@ -48,16 +46,16 @@ namespace NotarialOfficeCustomers
         {
             try
             {
-                customerTableAdapter2.Update(notarialOfficeCustemersDataSet2.customer);
+                customerTableAdapter2.Update(notarialOfficeCustemersDataSet11.customer);
 
             }
             catch
             {
-                MessageBox.Show("Ошибка обработки данных!");
+                MessageBox.Show("Запись не может быть удалена! Есть связанные записи!");
                 // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.gender' table. You can move, or remove it, as needed.
-                this.genderTableAdapter.Fill(this.notarialOfficeCustemersDataSet2.gender);
+                this.genderTableAdapter.Fill(this.notarialOfficeCustemersDataSet11.gender);
                 // TODO: This line of code loads data into the 'notarialOfficeCustemersDataSet2.customer' table. You can move, or remove it, as needed.
-                this.customerTableAdapter2.Fill(this.notarialOfficeCustemersDataSet2.customer);
+                this.customerTableAdapter2.Fill(this.notarialOfficeCustemersDataSet11.customer);
             }
 
         }

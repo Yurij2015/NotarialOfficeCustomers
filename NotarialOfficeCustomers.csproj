@@ -96,12 +96,6 @@
     <Compile Include="ElectronicQueueForm.Designer.cs">
       <DependentUpon>ElectronicQueueForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,9 +166,6 @@
     <Compile Include="RussianDataFilterLocalizationProvider .cs" />
     <EmbeddedResource Include="ElectronicQueueForm.resx">
       <DependentUpon>ElectronicQueueForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>

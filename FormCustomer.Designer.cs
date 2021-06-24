@@ -29,22 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn1 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomer));
-            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.notarialOfficeCustemersDataSet4 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
-            this.notarialOfficeCustemersDataSet3 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
-            this.notarialOfficeCustemersDataSet2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.notarialOfficeCustemersDataSet13 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
             this.radBindingNavigator1 = new Telerik.WinControls.UI.RadBindingNavigator();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radBindingNavigator1RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -65,8 +58,6 @@
             this.radBindingNavigator1DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
             this.commandBarButton2 = new Telerik.WinControls.UI.CommandBarButton();
-            this.customerTableAdapter2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter();
-            this.genderTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSetTableAdapters.genderTableAdapter();
             this.radBindingNavigator2 = new Telerik.WinControls.UI.RadBindingNavigator();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radBindingNavigator2RowElement = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -86,17 +77,12 @@
             this.commandBarSeparator10 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.radBindingNavigator2DeleteItem = new Telerik.WinControls.UI.CommandBarButton();
             this.notarialOfficeCustemersDataSet11 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
-            this.genderTableAdapter1 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.genderTableAdapter();
-            this.notarialOfficeCustemersDataSet12 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1();
-            this.customerTableAdapter3 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.customerTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).BeginInit();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter2 = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.customerTableAdapter();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.genderTableAdapter = new NotarialOfficeCustomers.NotarialOfficeCustemersDataSet1TableAdapters.genderTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).BeginInit();
             this.radBindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
@@ -104,122 +90,81 @@
             this.radBindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
-            // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "gender";
-            this.genderBindingSource.DataSource = this.notarialOfficeCustemersDataSet4;
-            // 
-            // notarialOfficeCustemersDataSet4
-            // 
-            this.notarialOfficeCustemersDataSet4.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // notarialOfficeCustemersDataSet3
-            // 
-            this.notarialOfficeCustemersDataSet3.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // notarialOfficeCustemersDataSet2
-            // 
-            this.notarialOfficeCustemersDataSet2.DataSetName = "NotarialOfficeCustemersDataSet";
-            this.notarialOfficeCustemersDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radGridView1
             // 
             this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
             this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView1.ForeColor = System.Drawing.Color.Black;
             this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(0, 36);
+            this.radGridView1.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
             this.radGridView1.MasterTemplate.AllowSearchRow = true;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "id";
-            gridViewDecimalColumn1.HeaderText = "Номер";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.Name = "id";
-            gridViewDecimalColumn1.ReadOnly = true;
-            gridViewDecimalColumn1.Width = 66;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "fullName";
             gridViewTextBoxColumn1.HeaderText = "ФИО";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
             gridViewTextBoxColumn1.Name = "fullName";
-            gridViewTextBoxColumn1.Width = 210;
-            gridViewDecimalColumn2.DataType = typeof(long);
-            gridViewDecimalColumn2.EnableExpressionEditor = false;
-            gridViewDecimalColumn2.FieldName = "phone";
-            gridViewDecimalColumn2.HeaderText = "Номер телефона";
-            gridViewDecimalColumn2.Name = "phone1";
-            gridViewDecimalColumn2.Width = 83;
+            gridViewTextBoxColumn1.Width = 241;
+            gridViewTextBoxColumn1.WrapText = true;
+            gridViewDecimalColumn1.DataType = typeof(long);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "phone";
+            gridViewDecimalColumn1.HeaderText = "Номер телефона";
+            gridViewDecimalColumn1.Name = "phone1";
+            gridViewDecimalColumn1.Width = 127;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "adress";
             gridViewTextBoxColumn2.HeaderText = "Адрес";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
             gridViewTextBoxColumn2.Name = "adress";
-            gridViewTextBoxColumn2.Width = 253;
+            gridViewTextBoxColumn2.Width = 258;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.FieldName = "passport";
             gridViewTextBoxColumn3.HeaderText = "Паспорт";
-            gridViewTextBoxColumn3.IsAutoGenerated = true;
             gridViewTextBoxColumn3.Name = "passport";
-            gridViewTextBoxColumn3.Width = 102;
+            gridViewTextBoxColumn3.Width = 135;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FieldName = "email";
             gridViewTextBoxColumn4.HeaderText = "Электронный адрес";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
             gridViewTextBoxColumn4.Name = "email";
-            gridViewTextBoxColumn4.Width = 185;
+            gridViewTextBoxColumn4.Width = 126;
             gridViewComboBoxColumn1.DataSource = this.genderBindingSource;
             gridViewComboBoxColumn1.DataType = typeof(int);
             gridViewComboBoxColumn1.DisplayMember = "value";
             gridViewComboBoxColumn1.EnableExpressionEditor = false;
             gridViewComboBoxColumn1.FieldName = "gender";
             gridViewComboBoxColumn1.HeaderText = "Пол";
-            gridViewComboBoxColumn1.Name = "gender";
+            gridViewComboBoxColumn1.Name = "gender1";
             gridViewComboBoxColumn1.ValueMember = "id";
-            gridViewComboBoxColumn1.Width = 72;
+            gridViewComboBoxColumn1.Width = 107;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
-            gridViewDecimalColumn2,
+            gridViewDecimalColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
             gridViewComboBoxColumn1});
-            this.radGridView1.MasterTemplate.DataSource = this.customerBindingSource2;
+            this.radGridView1.MasterTemplate.DataSource = this.customerBindingSource;
             this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
             this.radGridView1.MasterTemplate.EnableFiltering = true;
             this.radGridView1.MasterTemplate.EnablePaging = true;
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radGridView1.Size = new System.Drawing.Size(1001, 470);
+            this.radGridView1.Size = new System.Drawing.Size(1024, 504);
             this.radGridView1.TabIndex = 0;
             this.radGridView1.ThemeName = "Fluent";
             // 
-            // customerBindingSource2
-            // 
-            this.customerBindingSource2.DataMember = "customer";
-            this.customerBindingSource2.DataSource = this.notarialOfficeCustemersDataSet13;
-            // 
-            // notarialOfficeCustemersDataSet13
-            // 
-            this.notarialOfficeCustemersDataSet13.DataSetName = "NotarialOfficeCustemersDataSet1";
-            this.notarialOfficeCustemersDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // radBindingNavigator1
             // 
-            this.radBindingNavigator1.BindingSource = this.customerBindingSource2;
             this.radBindingNavigator1.Controls.Add(this.radButton1);
             this.radBindingNavigator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.radBindingNavigator1.Location = new System.Drawing.Point(0, 0);
@@ -386,24 +331,16 @@
             this.commandBarButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarButton2.UseCompatibleTextRendering = false;
             // 
-            // customerTableAdapter2
-            // 
-            this.customerTableAdapter2.ClearBeforeFill = true;
-            // 
-            // genderTableAdapter
-            // 
-            this.genderTableAdapter.ClearBeforeFill = true;
-            // 
             // radBindingNavigator2
             // 
-            this.radBindingNavigator2.BindingSource = this.customerBindingSource2;
+            this.radBindingNavigator2.BindingSource = this.customerBindingSource;
             this.radBindingNavigator2.Controls.Add(this.radButton2);
             this.radBindingNavigator2.Dock = System.Windows.Forms.DockStyle.Top;
             this.radBindingNavigator2.Location = new System.Drawing.Point(0, 0);
             this.radBindingNavigator2.Name = "radBindingNavigator2";
             this.radBindingNavigator2.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
             this.radBindingNavigator2RowElement});
-            this.radBindingNavigator2.Size = new System.Drawing.Size(1001, 30);
+            this.radBindingNavigator2.Size = new System.Drawing.Size(1024, 30);
             this.radBindingNavigator2.TabIndex = 1;
             this.radBindingNavigator2.ThemeName = "Fluent";
             // 
@@ -550,24 +487,29 @@
             this.notarialOfficeCustemersDataSet11.DataSetName = "NotarialOfficeCustemersDataSet1";
             this.notarialOfficeCustemersDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // genderTableAdapter1
+            // customerBindingSource
             // 
-            this.genderTableAdapter1.ClearBeforeFill = true;
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.notarialOfficeCustemersDataSet11;
             // 
-            // notarialOfficeCustemersDataSet12
+            // customerTableAdapter2
             // 
-            this.notarialOfficeCustemersDataSet12.DataSetName = "NotarialOfficeCustemersDataSet1";
-            this.notarialOfficeCustemersDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.customerTableAdapter2.ClearBeforeFill = true;
             // 
-            // customerTableAdapter3
+            // genderBindingSource
             // 
-            this.customerTableAdapter3.ClearBeforeFill = true;
+            this.genderBindingSource.DataMember = "gender";
+            this.genderBindingSource.DataSource = this.notarialOfficeCustemersDataSet11;
+            // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
             // 
             // FormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 504);
+            this.ClientSize = new System.Drawing.Size(1024, 504);
             this.Controls.Add(this.radBindingNavigator2);
             this.Controls.Add(this.radGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -578,14 +520,8 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Клиенты нотариальной конторы";
             this.Load += new System.EventHandler(this.FormCustomer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radBindingNavigator1)).EndInit();
             this.radBindingNavigator1.ResumeLayout(false);
             this.radBindingNavigator1.PerformLayout();
@@ -595,7 +531,8 @@
             this.radBindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notarialOfficeCustemersDataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -627,12 +564,7 @@
         private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1AddNewItem;
         private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator5;
         private Telerik.WinControls.UI.CommandBarButton radBindingNavigator1DeleteItem;
-        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet2;
-        private System.Windows.Forms.BindingSource customerBindingSource2;
-        private NotarialOfficeCustemersDataSetTableAdapters.customerTableAdapter customerTableAdapter2;
         private Telerik.WinControls.UI.RadButton radButton1;
-        private System.Windows.Forms.BindingSource genderBindingSource;
-        private NotarialOfficeCustemersDataSetTableAdapters.genderTableAdapter genderTableAdapter;
         private Telerik.WinControls.UI.RadBindingNavigator radBindingNavigator2;
         private Telerik.WinControls.UI.CommandBarRowElement radBindingNavigator2RowElement;
         private Telerik.WinControls.UI.CommandBarStripElement radBindingNavigator2FirstStrip;
@@ -652,11 +584,9 @@
         private Telerik.WinControls.UI.CommandBarButton radBindingNavigator2DeleteItem;
         private Telerik.WinControls.UI.RadButton radButton2;
         private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet11;
-        private NotarialOfficeCustemersDataSet1TableAdapters.genderTableAdapter genderTableAdapter1;
-        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet3;
-        private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet12;
-        private NotarialOfficeCustemersDataSet notarialOfficeCustemersDataSet4;
-        private NotarialOfficeCustemersDataSet1 notarialOfficeCustemersDataSet13;
-        private NotarialOfficeCustemersDataSet1TableAdapters.customerTableAdapter customerTableAdapter3;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private NotarialOfficeCustemersDataSet1TableAdapters.customerTableAdapter customerTableAdapter2;
+        private System.Windows.Forms.BindingSource genderBindingSource;
+        private NotarialOfficeCustemersDataSet1TableAdapters.genderTableAdapter genderTableAdapter;
     }
 }
